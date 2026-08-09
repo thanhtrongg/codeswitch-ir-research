@@ -1,0 +1,1447 @@
+{
+  "analysis_script_sha256": "080FB391491C6EF806FC999663A934B91071708D11A132D5B262032BD101C530",
+  "arguana_executed": false,
+  "beneficial_switch_count": 8,
+  "class_balance": {
+    "fit": {
+      "accuracy": 0.5216666666666666,
+      "actual_bm25_winner_count": 91,
+      "actual_bm25_winner_rate": 0.15166666666666667,
+      "actual_qwen_winner_count": 509,
+      "actual_qwen_winner_rate": 0.8483333333333334,
+      "balanced_accuracy": 0.5466115416999504,
+      "bm25_f1": 0.2697201017811705,
+      "bm25_precision": 0.17549668874172186,
+      "bm25_recall": 0.5824175824175825,
+      "confusion_matrix": {
+        "actual_BM25_predicted_BM25": 53,
+        "actual_BM25_predicted_Qwen": 38,
+        "actual_Qwen_predicted_BM25": 249,
+        "actual_Qwen_predicted_Qwen": 260
+      },
+      "improvement_over_majority": -0.32666666666666677,
+      "majority_baseline_accuracy": 0.8483333333333334,
+      "majority_class": "Qwen",
+      "matthews_correlation_coefficient": 0.06687925815822109,
+      "n": 600
+    },
+    "holdout": {
+      "accuracy": 0.6,
+      "actual_bm25_winner_count": 28,
+      "actual_bm25_winner_rate": 0.14,
+      "actual_qwen_winner_count": 172,
+      "actual_qwen_winner_rate": 0.86,
+      "balanced_accuracy": 0.4684385382059801,
+      "bm25_f1": 0.16666666666666666,
+      "bm25_precision": 0.11764705882352941,
+      "bm25_recall": 0.2857142857142857,
+      "confusion_matrix": {
+        "actual_BM25_predicted_BM25": 8,
+        "actual_BM25_predicted_Qwen": 20,
+        "actual_Qwen_predicted_BM25": 60,
+        "actual_Qwen_predicted_Qwen": 112
+      },
+      "improvement_over_majority": -0.26,
+      "majority_baseline_accuracy": 0.86,
+      "majority_class": "Qwen",
+      "matthews_correlation_coefficient": -0.04623692276791259,
+      "n": 200
+    },
+    "validation": {
+      "accuracy": 0.625,
+      "actual_bm25_winner_count": 26,
+      "actual_bm25_winner_rate": 0.13,
+      "actual_qwen_winner_count": 174,
+      "actual_qwen_winner_rate": 0.87,
+      "balanced_accuracy": 0.4409814323607427,
+      "bm25_f1": 0.11764705882352942,
+      "bm25_precision": 0.0847457627118644,
+      "bm25_recall": 0.19230769230769232,
+      "confusion_matrix": {
+        "actual_BM25_predicted_BM25": 5,
+        "actual_BM25_predicted_Qwen": 21,
+        "actual_Qwen_predicted_BM25": 54,
+        "actual_Qwen_predicted_Qwen": 120
+      },
+      "improvement_over_majority": -0.245,
+      "majority_baseline_accuracy": 0.87,
+      "majority_class": "Qwen",
+      "matthews_correlation_coefficient": -0.08704511366967645,
+      "n": 200
+    }
+  },
+  "climate_holdout_consumed_for_future_design": true,
+  "created_utc": "2026-08-09T05:43:07.567023+00:00",
+  "csr_l_untouched": true,
+  "distribution_shift_diagnostics": {
+    "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+    "interpretation": "Distribution shift is plausible if these source-split differences are material, but no causal or external-domain claim is made.",
+    "pairwise_G_shift": [
+      {
+        "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "first": "FIT",
+        "ks_G": 0.06499999999999995,
+        "second": "VALIDATION",
+        "wasserstein_G": 0.037686111111111066
+      },
+      {
+        "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "first": "FIT",
+        "ks_G": 0.08000000000000007,
+        "second": "HOLDOUT",
+        "wasserstein_G": 0.041019444444444414
+      },
+      {
+        "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "first": "VALIDATION",
+        "ks_G": 0.05500000000000005,
+        "second": "HOLDOUT",
+        "wasserstein_G": 0.0351166666666666
+      }
+    ],
+    "split_statistics": {
+      "FIT": {
+        "G": {
+          "max": 0.9533333333333333,
+          "mean": 0.0,
+          "median": -0.003333333333333355,
+          "min": -0.9516666666666667,
+          "n": 600,
+          "q1": -0.27375,
+          "q3": 0.2925,
+          "std_ddof0": 0.4087375097196878
+        },
+        "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "n": 600,
+        "percentage_G_lt_negative_tau": 32.833333333333336,
+        "raw_BM25": {
+          "max": 0.9411302292171779,
+          "mean": 0.30230179122415635,
+          "median": 0.28991030450246413,
+          "min": 0.0008088713933000782,
+          "n": 600,
+          "q1": 0.14014241384299195,
+          "q3": 0.450958300573985,
+          "std_ddof0": 0.19311363056156247
+        },
+        "raw_Qwen": {
+          "max": 0.9101105736189766,
+          "mean": 0.274646758331683,
+          "median": 0.2485302656501812,
+          "min": 0.00025059885754853754,
+          "n": 600,
+          "q1": 0.11851429464042315,
+          "q3": 0.4103547486179102,
+          "std_ddof0": 0.18510169004730395
+        },
+        "tau": 0.2
+      },
+      "HOLDOUT": {
+        "G": {
+          "max": 0.9266666666666666,
+          "mean": 0.03225833333333333,
+          "median": 0.03916666666666663,
+          "min": -0.9666666666666667,
+          "n": 200,
+          "q1": -0.30208333333333337,
+          "q3": 0.35291666666666666,
+          "std_ddof0": 0.43074118606768963
+        },
+        "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "n": 200,
+        "percentage_G_lt_negative_tau": 34.0,
+        "raw_BM25": {
+          "max": 0.9955437575290325,
+          "mean": 0.30390102254724083,
+          "median": 0.2889262244204521,
+          "min": 0.0,
+          "n": 200,
+          "q1": 0.1228614030238526,
+          "q3": 0.44332907129147,
+          "std_ddof0": 0.2109887954046346
+        },
+        "raw_Qwen": {
+          "max": 0.8036494309821256,
+          "mean": 0.2921645367665183,
+          "median": 0.2659404885420099,
+          "min": 0.0008616883393825159,
+          "n": 200,
+          "q1": 0.1467140105320465,
+          "q3": 0.4219618436709224,
+          "std_ddof0": 0.19125509859936826
+        },
+        "tau": 0.2
+      },
+      "VALIDATION": {
+        "G": {
+          "max": 0.9416666666666667,
+          "mean": 0.03339166666666668,
+          "median": 0.0033333333333334103,
+          "min": -0.9166666666666666,
+          "n": 200,
+          "q1": -0.2520833333333333,
+          "q3": 0.33791666666666664,
+          "std_ddof0": 0.39882491903298456
+        },
+        "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "n": 200,
+        "percentage_G_lt_negative_tau": 29.5,
+        "raw_BM25": {
+          "max": 0.7845166851478258,
+          "mean": 0.3062188588750718,
+          "median": 0.28861797942509254,
+          "min": 0.010663122244963956,
+          "n": 200,
+          "q1": 0.13412017156629244,
+          "q3": 0.4480916833875605,
+          "std_ddof0": 0.19714785648299257
+        },
+        "raw_Qwen": {
+          "max": 0.7608593826289562,
+          "mean": 0.2956599321685852,
+          "median": 0.28632053961934545,
+          "min": 0.008226582060284083,
+          "n": 200,
+          "q1": 0.14501147297389974,
+          "q3": 0.41605623824025334,
+          "std_ddof0": 0.1814891598409853
+        },
+        "tau": 0.2
+      }
+    }
+  },
+  "environment": {
+    "numpy": "2.4.6",
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]"
+  },
+  "failure_mode_evidence": [
+    {
+      "confidence": "STRONG",
+      "evidence_against": "FIT is above chance and the diagnostic AUROC is not necessarily exactly 0.5; the result does not prove no information exists.",
+      "evidence_for": "FIT margin accuracy=0.521667; POST-HOC AUROC for BM25 winners=0.532913; holdout gain correlation=0.072269.",
+      "failure_mode": "Signal has almost no predictive information"
+    },
+    {
+      "confidence": "STRONG",
+      "evidence_against": "Balanced accuracy, BM25 recall, MCC, and AUROC were also reported, so the analysis is not limited to raw accuracy.",
+      "evidence_for": "Qwen is the majority winner in FIT, validation, and holdout; always-Qwen accuracy exceeds both candidate FIT accuracies.",
+      "failure_mode": "Class imbalance makes winner accuracy misleading"
+    },
+    {
+      "confidence": "MODERATE",
+      "evidence_against": "CDFs are correctly fitted and right-inclusive; shift is observational and cannot establish that normalization caused failure.",
+      "evidence_for": "G distribution shift diagnostics show KS values [0.065, 0.08, 0.055] across source stages.",
+      "failure_mode": "CDF normalization fails to preserve relative reliability"
+    },
+    {
+      "confidence": "MODERATE",
+      "evidence_against": "The preregistered holdout cannot be used to select or compare unregistered thresholds; no tau beyond 0.20 was tested.",
+      "evidence_for": "Validation preferred progressively lower BM25 routing as tau increased, while the frozen holdout still produced net negative switching.",
+      "failure_mode": "Thresholding is insufficient"
+    },
+    {
+      "confidence": "STRONG",
+      "evidence_against": "This is specific to the frozen Qwen baseline, signals, threshold, and Climate setting.",
+      "evidence_for": "There were 60 harmful BM25 switches versus 8 beneficial switches; harmful-switch loss exceeded beneficial-switch gain.",
+      "failure_mode": "Hard selection is too costly under a strong Qwen baseline"
+    },
+    {
+      "confidence": "WEAK",
+      "evidence_against": "All three are source splits from one benchmark and the analysis is not a causal shift test.",
+      "evidence_for": "Saved FIT, validation, and holdout G and raw-signal summaries differ; pairwise KS/Wasserstein diagnostics are reported.",
+      "failure_mode": "Source distribution shift"
+    },
+    {
+      "confidence": "STRONG",
+      "evidence_against": "The conclusion is limited to margin/dispersion and this frozen source setting; other observables were not tested.",
+      "evidence_for": "BM25 wins on 28/200 holdout queries and the oracle exceeds Qwen, but only 8 opportunities were captured and 60 BM25 switches were harmful.",
+      "failure_mode": "Complementarity exists but current signals cannot identify it"
+    }
+  ],
+  "figures": {
+    "figure1_holdout_confusion": {
+      "pdf": "results/milestone2_5/figures/figure1_holdout_confusion.pdf",
+      "plot_data_csv": "results/milestone2_5/figures/figure1_holdout_confusion_plot_data.csv",
+      "png": "results/milestone2_5/figures/figure1_holdout_confusion.png"
+    },
+    "figure2_G_vs_actual_gain": {
+      "pdf": "results/milestone2_5/figures/figure2_G_vs_actual_gain.pdf",
+      "plot_data_csv": "results/milestone2_5/figures/figure2_G_vs_actual_gain_plot_data.csv",
+      "png": "results/milestone2_5/figures/figure2_G_vs_actual_gain.png"
+    },
+    "figure3_G_distributions": {
+      "pdf": "results/milestone2_5/figures/figure3_G_distributions.pdf",
+      "plot_data_csv": "results/milestone2_5/figures/figure3_G_distributions_plot_data.csv",
+      "png": "results/milestone2_5/figures/figure3_G_distributions.png"
+    },
+    "figure4_opportunity_capture": {
+      "pdf": "results/milestone2_5/figures/figure4_opportunity_capture.pdf",
+      "plot_data_csv": "results/milestone2_5/figures/figure4_opportunity_capture_plot_data.csv",
+      "png": "results/milestone2_5/figures/figure4_opportunity_capture.png"
+    }
+  },
+  "fit_diagnostics": {
+    "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+    "dispersion": {
+      "accuracy": 0.49166666666666664,
+      "actual_bm25_winner_count": 91,
+      "actual_bm25_winner_rate": 0.15166666666666667,
+      "actual_qwen_winner_count": 509,
+      "actual_qwen_winner_rate": 0.8483333333333334,
+      "auroc_for_BM25_winner_using_minus_G": 0.5087653014961463,
+      "balanced_accuracy": 0.5018566894794793,
+      "bm25_f1": 0.2355889724310777,
+      "bm25_precision": 0.1525974025974026,
+      "bm25_recall": 0.5164835164835165,
+      "confusion_matrix": {
+        "actual_BM25_predicted_BM25": 47,
+        "actual_BM25_predicted_Qwen": 44,
+        "actual_Qwen_predicted_BM25": 261,
+        "actual_Qwen_predicted_Qwen": 248
+      },
+      "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+      "improvement_over_majority": -0.35666666666666674,
+      "majority_baseline_accuracy": 0.8483333333333334,
+      "majority_class": "Qwen",
+      "matthews_correlation_coefficient": 0.0026649071104406295,
+      "n": 600,
+      "spearman_G_vs_Qwen_minus_BM25_ndcg_at_10": 0.03501875895146053,
+      "spearman_minus_G_vs_BM25_minus_Qwen_ndcg_at_10": 0.03501875895146053
+    },
+    "dispersion_accuracy": 0.49166666666666664,
+    "margin": {
+      "accuracy": 0.5216666666666666,
+      "actual_bm25_winner_count": 91,
+      "actual_bm25_winner_rate": 0.15166666666666667,
+      "actual_qwen_winner_count": 509,
+      "actual_qwen_winner_rate": 0.8483333333333334,
+      "auroc_for_BM25_winner_using_minus_G": 0.5329130594356527,
+      "balanced_accuracy": 0.5466115416999504,
+      "bm25_f1": 0.2697201017811705,
+      "bm25_precision": 0.17549668874172186,
+      "bm25_recall": 0.5824175824175825,
+      "confusion_matrix": {
+        "actual_BM25_predicted_BM25": 53,
+        "actual_BM25_predicted_Qwen": 38,
+        "actual_Qwen_predicted_BM25": 249,
+        "actual_Qwen_predicted_Qwen": 260
+      },
+      "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+      "improvement_over_majority": -0.32666666666666677,
+      "majority_baseline_accuracy": 0.8483333333333334,
+      "majority_class": "Qwen",
+      "matthews_correlation_coefficient": 0.06687925815822109,
+      "n": 600,
+      "spearman_G_vs_Qwen_minus_BM25_ndcg_at_10": 0.034891340371051016,
+      "spearman_minus_G_vs_BM25_minus_Qwen_ndcg_at_10": 0.034891340371051016
+    },
+    "margin_accuracy": 0.5216666666666666,
+    "table_rows": [
+      {
+        "BM25_F1": 0.2697201017811705,
+        "BM25_precision": 0.17549668874172186,
+        "BM25_recall": 0.5824175824175825,
+        "MCC": 0.06687925815822109,
+        "POSTHOC_AUROC_BM25": 0.5329130594356527,
+        "POSTHOC_Spearman_G_vs_Qwen_minus_BM25": 0.034891340371051016,
+        "actual_BM25_count": 91,
+        "actual_Qwen_count": 509,
+        "balanced_accuracy": 0.5466115416999504,
+        "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "improvement_over_majority": -0.32666666666666677,
+        "majority_baseline": 0.8483333333333334,
+        "signal": "margin",
+        "winner_accuracy": 0.5216666666666666
+      },
+      {
+        "BM25_F1": 0.2355889724310777,
+        "BM25_precision": 0.1525974025974026,
+        "BM25_recall": 0.5164835164835165,
+        "MCC": 0.0026649071104406295,
+        "POSTHOC_AUROC_BM25": 0.5087653014961463,
+        "POSTHOC_Spearman_G_vs_Qwen_minus_BM25": 0.03501875895146053,
+        "actual_BM25_count": 91,
+        "actual_Qwen_count": 509,
+        "balanced_accuracy": 0.5018566894794793,
+        "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "improvement_over_majority": -0.35666666666666674,
+        "majority_baseline": 0.8483333333333334,
+        "signal": "dispersion",
+        "winner_accuracy": 0.49166666666666664
+      }
+    ]
+  },
+  "future_hypotheses_if_any": [
+    {
+      "clean_data_consequence": "The Climate Milestone 2 holdout is consumed and cannot serve as confirmatory evidence.",
+      "difference_from_M2": "Changes the scientific target from winner classification to pre-registered risk control/utility with abstention; it is not another tau, k, or signal tweak.",
+      "fresh_evidence_required": "Fresh source-disjoint development groups and a separately held-out confirmatory resource with an externally specified cost matrix.",
+      "id": "H1",
+      "motivation": "The holdout had 60 harmful BM25 switches versus 8 beneficial switches under the frozen hard selector.",
+      "novelty_risk": "HIGH",
+      "prior_art_threat": "Arabzadeh, QuDAR, and query-adaptive hybrid work already cover strategy selection and confidence/weighting mechanisms.",
+      "scientific_question": "Can an explicitly asymmetric selective-risk or abstention objective avoid harmful BM25 switches while retaining a measurable subset of BM25 opportunities?"
+    },
+    {
+      "clean_data_consequence": "Current Climate FIT, validation, and holdout are exploratory history for this hypothesis.",
+      "difference_from_M2": "Tests a preregistered new feature family and identifiability question rather than combining margin and dispersion or adding a post-hoc exception.",
+      "fresh_evidence_required": "New source-query groups, blinded feature freeze, multiple fixed retrievers, and a fresh target or benchmark.",
+      "id": "H2",
+      "motivation": "Oracle headroom and 28 BM25-winning holdout queries show complementarity, while margin-based G was weak for identifying them.",
+      "novelty_risk": "HIGH",
+      "prior_art_threat": "MoR, QuDAR, RouterRetriever, QPP, and complementarity-routing work make this a high-risk replication/transfer question.",
+      "scientific_question": "Can observable retriever disagreement or query-document coverage identify relative BM25 advantage when independent top-k score shape does not?"
+    },
+    {
+      "clean_data_consequence": "All Milestone 2 Climate data are exploratory history and cannot be used as clean confirmation.",
+      "difference_from_M2": "Studies pre-registered multi-source calibration and invariance; it does not retune the consumed holdout or recalibrate on the target after seeing outcomes.",
+      "fresh_evidence_required": "At least two genuinely new source resources plus a new confirmatory target, with all calibration boundaries fixed in advance.",
+      "id": "H3",
+      "motivation": "G and raw-signal distributions vary across FIT, validation, and holdout, and ArguAna transfer was not authorized after source failure.",
+      "novelty_risk": "HIGH",
+      "prior_art_threat": "Generic QPP, confidence, and query-adaptive routing literature directly threatens any calibration-method claim.",
+      "scientific_question": "Is cross-resource calibration itself the limiting factor, such that relative-reliability signals need multi-source invariance before transfer can be tested?"
+    }
+  ],
+  "harmful_switch_count": 60,
+  "holdout_switch_diagnostics": {
+    "beneficial_gain_mean": 0.3654324486088254,
+    "beneficial_gain_total": 2.923459588870603,
+    "beneficial_switch_count": 8,
+    "bm25_opportunity_count": 28,
+    "bm25_opportunity_recall": 0.2857142857142857,
+    "bm25_switch_count": 68,
+    "bm25_switch_precision": 0.11764705882352941,
+    "categories": [
+      {
+        "category": "beneficial_BM25_switches",
+        "count": 8,
+        "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "interpretation": "BM25-minus-Qwen gain from a beneficial switch",
+        "mean_gain_or_loss_ndcg_at_10": 0.3654324486088254,
+        "mean_signed_BM25_minus_Qwen_ndcg_at_10": 0.3654324486088254,
+        "percentage_of_holdout": 4.0,
+        "total_gain_or_loss_ndcg_at_10": 2.923459588870603,
+        "total_signed_BM25_minus_Qwen_ndcg_at_10": 2.923459588870603
+      },
+      {
+        "category": "harmful_BM25_switches",
+        "count": 60,
+        "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "interpretation": "Qwen-minus-BM25 loss from an incorrect BM25 switch",
+        "mean_gain_or_loss_ndcg_at_10": 0.09392864329853948,
+        "mean_signed_BM25_minus_Qwen_ndcg_at_10": -0.09392864329853948,
+        "percentage_of_holdout": 30.0,
+        "total_gain_or_loss_ndcg_at_10": 5.635718597912368,
+        "total_signed_BM25_minus_Qwen_ndcg_at_10": -5.635718597912368
+      },
+      {
+        "category": "correct_Qwen_keeps",
+        "count": 112,
+        "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "interpretation": "Qwen-minus-BM25 advantage retained by the Qwen fallback",
+        "mean_gain_or_loss_ndcg_at_10": 0.17111502659539868,
+        "mean_signed_BM25_minus_Qwen_ndcg_at_10": -0.17111502659539868,
+        "percentage_of_holdout": 56.0,
+        "total_gain_or_loss_ndcg_at_10": 19.164882978684652,
+        "total_signed_BM25_minus_Qwen_ndcg_at_10": -19.164882978684652
+      },
+      {
+        "category": "missed_BM25_opportunities",
+        "count": 20,
+        "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+        "interpretation": "BM25-minus-Qwen gain left unrealized by a missed opportunity",
+        "mean_gain_or_loss_ndcg_at_10": 0.3491869148809402,
+        "mean_signed_BM25_minus_Qwen_ndcg_at_10": 0.3491869148809402,
+        "percentage_of_holdout": 10.0,
+        "total_gain_or_loss_ndcg_at_10": 6.983738297618805,
+        "total_signed_BM25_minus_Qwen_ndcg_at_10": 6.983738297618805
+      }
+    ],
+    "correct_qwen_keep_count": 112,
+    "diagnostic_label": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+    "harmful_loss_mean": 0.09392864329853948,
+    "harmful_loss_total": 5.635718597912368,
+    "harmful_switch_count": 60,
+    "harmful_switch_rate": 0.8823529411764706,
+    "missed_gain_mean": 0.3491869148809402,
+    "missed_gain_total": 6.983738297618805,
+    "missed_opportunity_count": 20,
+    "missed_opportunity_rate": 0.7142857142857143
+  },
+  "input_files": {
+    "milestone2_output_manifest": "results/milestone2/logs/output_manifest.json",
+    "milestone2_output_manifest_sha256": "0B9E51A2A9E8BF4FAE9E43A6BB9180D783D1CB20BA83DC0709C91F14A66633A9",
+    "milestone2_summary": "results/milestone2/milestone2_summary.json",
+    "milestone2_summary_sha256": "6DF43D8461157802778348691E28F96187B9C3C3D98422C8FEC85893BD597E0E"
+  },
+  "majority_baseline": {
+    "fit": 0.8483333333333334,
+    "holdout": 0.86,
+    "validation": 0.87
+  },
+  "milestone2_record": {
+    "gate": {
+      "overall_source_gate_pass": false,
+      "source_cs_ci_lower": -0.032543918000253934,
+      "source_cs_ci_upper": 0.0048113375672271955,
+      "source_cs_difference_selector_minus_qwen": -0.01356129504520883,
+      "source_cs_gate_pass": false,
+      "source_cs_gate_rule": "95% paired-bootstrap lower bound > 0",
+      "source_original_ci_lower": -0.04019346117907389,
+      "source_original_ci_upper": 0.010080239893545945,
+      "source_original_difference_selector_minus_qwen": -0.01487788451846475,
+      "source_original_safety_pass": false,
+      "source_original_safety_rule": "95% paired-bootstrap lower bound >= 0"
+    },
+    "headline_checks": {
+      "original_diff": true,
+      "routing": true,
+      "source_ci": true,
+      "source_diff": true,
+      "source_qwen_ndcg": true,
+      "source_selector_ndcg": true
+    },
+    "ledger": {
+      "arguana_accessed": false,
+      "arguana_completed": false,
+      "baseline_artifacts_verified": true,
+      "climate_holdout_accessed": true,
+      "climate_holdout_completed": true,
+      "csr_l_accessed": false,
+      "execution_finished_utc": "2026-08-09T05:05:29.871012+00:00",
+      "execution_started_utc": "2026-08-09T05:04:01.178708+00:00",
+      "failure": null,
+      "final_milestone2_status": "MILESTONE 2 SOURCE GATE FAILED",
+      "fit_completed": true,
+      "gpu_worker_launched": false,
+      "method_manifest_created": true,
+      "method_manifest_path": "results/milestone2/freeze/milestone2_method_freeze_manifest.yaml",
+      "method_manifest_sha256": "CADC299EED07C5AE6DC37C926F7FCF8CCC4FEF72BAF9962010F1DC30CEC25D7F",
+      "output_file_count": 54,
+      "output_manifest_path": "results/milestone2/logs/output_manifest.json",
+      "outputs_completed": true,
+      "pre_holdout_test_record": {
+        "command": [
+          "D:\\Study\\Research\\Codeswitch\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pytest",
+          "-q",
+          "tests/test_milestone2.py",
+          "tests/test_milestone2_semantic_freeze.py"
+        ],
+        "log_path": "results/milestone2/logs/pre_holdout_tests.txt",
+        "log_sha256": "5B659FF4AEC67A30B01248B8729FE2D4D43BAFDF7E75345EBA783DAB5A173AC0",
+        "output": ".....................                                                    [100%]\n21 passed in 0.24s",
+        "returncode": 0
+      },
+      "pre_holdout_tests_passed": true,
+      "protocol_revision": "milestone_1_5d",
+      "protocol_verified": true,
+      "runtime_seconds": 88.692304,
+      "selected_signal": "normalized_top1_minus_top2_score_margin",
+      "selected_tau": 0.2,
+      "signal_frozen": true,
+      "source_gate_status": "FAIL",
+      "tau_frozen": true,
+      "timestamps": {
+        "baseline_artifacts_verified": "2026-08-09T05:04:47.681730+00:00",
+        "climate_holdout_accessed": "2026-08-09T05:05:22.722674+00:00",
+        "climate_holdout_completed": "2026-08-09T05:05:29.859693+00:00",
+        "fit_completed": "2026-08-09T05:04:51.537409+00:00",
+        "method_manifest_created": "2026-08-09T05:04:53.368971+00:00",
+        "outputs_completed": "2026-08-09T05:05:36.512010+00:00",
+        "pre_holdout_tests_passed": "2026-08-09T05:04:48.462058+00:00",
+        "protocol_verified": "2026-08-09T05:04:01.181701+00:00",
+        "signal_frozen": "2026-08-09T05:04:51.541464+00:00",
+        "source_gate_status": "2026-08-09T05:05:29.864504+00:00",
+        "tau_frozen": "2026-08-09T05:04:53.177258+00:00",
+        "transfer_gate_status": "2026-08-09T05:05:29.867501+00:00",
+        "validation_completed": "2026-08-09T05:04:53.174247+00:00"
+      },
+      "transfer_gate_status": "NOT_AUTHORIZED_SOURCE_GATE_FAILED",
+      "validation_completed": true
+    },
+    "output_manifest_entry_count": 53,
+    "output_manifest_sha256": "0B9E51A2A9E8BF4FAE9E43A6BB9180D783D1CB20BA83DC0709C91F14A66633A9",
+    "summary": {
+      "comparator_metrics": {
+        "Arabzadeh": {
+          "reason": "No faithful existing implementation with registered features/objective was present at freeze.",
+          "status": "NOT_AVAILABLE"
+        },
+        "source": {
+          "BGE-M3": {
+            "code_switched": {
+              "mrr": 0.1517425694367573,
+              "ndcg@10": 0.10079198227113814,
+              "recall@10": 0.12666666666666665
+            },
+            "delta_cs": {
+              "mrr": 0.0024361623388359233,
+              "ndcg@10": 0.0030463351955313245,
+              "recall@10": 0.005666666666666639
+            },
+            "original": {
+              "mrr": 0.14930640709792137,
+              "ndcg@10": 0.09774564707560682,
+              "recall@10": 0.12100000000000001
+            }
+          },
+          "Oracle diagnostic": {
+            "code_switched": {
+              "mrr": 0.34642693041697215,
+              "ndcg@10": 0.24561470714178874,
+              "recall@10": 0.2796666666666667
+            },
+            "delta_cs": {
+              "mrr": -0.03649722647023984,
+              "ndcg@10": -0.026698215839173256,
+              "recall@10": -0.035666666666666624
+            },
+            "original": {
+              "mrr": 0.382924156887212,
+              "ndcg@10": 0.272312922980962,
+              "recall@10": 0.3153333333333333
+            }
+          },
+          "RRF": {
+            "code_switched": {
+              "mrr": 0.2776901386764613,
+              "ndcg@10": 0.1988274998624503,
+              "recall@10": 0.24241666666666667
+            },
+            "delta_cs": {
+              "mrr": -0.02396046398866164,
+              "ndcg@10": -0.032944450054992996,
+              "recall@10": -0.0635
+            },
+            "original": {
+              "mrr": 0.30165060266512295,
+              "ndcg@10": 0.2317719499174433,
+              "recall@10": 0.30591666666666667
+            }
+          }
+        },
+        "target": null
+      },
+      "csr_l_untouched": true,
+      "execution_finished_utc": "2026-08-09T05:05:29.871012+00:00",
+      "execution_started_utc": "2026-08-09T05:04:01.178708+00:00",
+      "figures": {
+        "figure1_fit_signal_comparison": {
+          "pdf": "results/milestone2/figures/figure1_fit_signal_comparison.pdf",
+          "plot_data_csv": "results/milestone2/figures/figure1_fit_signal_comparison_plot_data.csv",
+          "png": "results/milestone2/figures/figure1_fit_signal_comparison.png"
+        },
+        "figure2_validation_tau_sweep": {
+          "pdf": "results/milestone2/figures/figure2_validation_tau_sweep.pdf",
+          "plot_data_csv": "results/milestone2/figures/figure2_validation_tau_sweep_plot_data.csv",
+          "png": "results/milestone2/figures/figure2_validation_tau_sweep.png"
+        },
+        "figure3_frozen_method_performance": {
+          "pdf": "results/milestone2/figures/figure3_frozen_method_performance.pdf",
+          "plot_data_csv": "results/milestone2/figures/figure3_frozen_method_performance_plot_data.csv",
+          "png": "results/milestone2/figures/figure3_frozen_method_performance.png"
+        },
+        "figure4_relative_reliability_confusion": {
+          "pdf": "results/milestone2/figures/figure4_relative_reliability_confusion.pdf",
+          "plot_data_csv": "results/milestone2/figures/figure4_relative_reliability_confusion_plot_data.csv",
+          "png": "results/milestone2/figures/figure4_relative_reliability_confusion.png"
+        },
+        "figure5_selector_routing": {
+          "pdf": "results/milestone2/figures/figure5_selector_routing.pdf",
+          "plot_data_csv": "results/milestone2/figures/figure5_selector_routing_plot_data.csv",
+          "png": "results/milestone2/figures/figure5_selector_routing.png"
+        }
+      },
+      "final_milestone2_status": "MILESTONE 2 SOURCE GATE FAILED",
+      "final_validation": {
+        "checks": {
+          "arguana_only_if_source_passed": true,
+          "bootstrap_2000_seed_20260809": true,
+          "candidate_specific_cdfs": true,
+          "coherence_not_restored": true,
+          "csr_l_untouched": true,
+          "execution_ledger_complete": true,
+          "fit_calibration_cs_only": true,
+          "fixed_bm25_qwen_artifacts_used": true,
+          "holdout_evaluated_once": true,
+          "machine_readable_results_created": true,
+          "method_frozen_before_holdout": true,
+          "no_reverse_direction": true,
+          "no_source_retuning": true,
+          "no_target_recalibration": true,
+          "only_margin_and_dispersion_considered": true,
+          "oracle_diagnostic_only": true,
+          "original_outcomes_not_used_for_tau": true,
+          "original_safety_uses_cs_calibration": true,
+          "paper_ready_figures_created": true,
+          "paper_ready_tables_created": true,
+          "pre_holdout_tests_passed": true,
+          "primary_comparison_qwen": true,
+          "protocol_1_5d_unchanged": true,
+          "report_generated_from_saved_result_values": true,
+          "rrf_k_60_baseline_only": true,
+          "signal_selected_fit_only": true,
+          "source_split_and_hashes_unchanged": true,
+          "tau_grid_unchanged": true,
+          "unselected_signal_discarded": true,
+          "validation_cs_only": true
+        },
+        "required_output_count": 33,
+        "status": "PASS",
+        "validated_utc": "2026-08-09T05:05:36.495895+00:00"
+      },
+      "fit_selection_rule": "highest winner accuracy; ties select margin",
+      "fit_signal_accuracies": {
+        "normalized_top1_minus_top2_score_margin": 0.5216666666666666,
+        "top_k_score_dispersion": 0.49166666666666664
+      },
+      "method_freeze_path": "results/milestone2/freeze/milestone2_method_freeze_manifest.yaml",
+      "method_freeze_sha256": "CADC299EED07C5AE6DC37C926F7FCF8CCC4FEF72BAF9962010F1DC30CEC25D7F",
+      "no_retuning_after_holdout": true,
+      "no_target_recalibration": true,
+      "original_safety": {
+        "source": {
+          "ci_lower": -0.04019346117907389,
+          "ci_upper": 0.010080239893545945,
+          "difference": -0.01487788451846475,
+          "pass": false
+        },
+        "target": null
+      },
+      "protocol_revision": "milestone_1_5d",
+      "report_path": "docs/milestone2_report.md",
+      "reproducibility": {
+        "baseline_artifact_manifest_path": "results/milestone2/logs/baseline_artifact_manifest.json",
+        "baseline_artifact_manifest_sha256": "898F8AAFD20D8C049CDCE80D34615F771AE95537F8127D6FE63E1CCCDC1E3903",
+        "bootstrap_replicates": 2000,
+        "bootstrap_seed": 20260809,
+        "gpu_used": false,
+        "gpu_worker_launched": false,
+        "os": "Windows-10-10.0.26200-SP0",
+        "package_versions": {
+          "PyYAML": "6.0.3",
+          "matplotlib": "3.11.1",
+          "numpy": "2.4.6",
+          "pytest": "9.1.1"
+        },
+        "processing": "CPU-only reads and post-processing of fixed artifacts",
+        "python_version": "3.11.0 (main, Oct 24 2022, 18:26:48) [MSC v.1933 64 bit (AMD64)]",
+        "repository_commit": null,
+        "repository_commit_note": "workspace has no .git metadata"
+      },
+      "reverse_transfer": "NOT_REGISTERED",
+      "runtime_seconds": 88.692304,
+      "selected_signal": "normalized_top1_minus_top2_score_margin",
+      "selected_signal_short_name": "margin",
+      "selected_tau": 0.2,
+      "selector_choice_rates": {
+        "source_code_switched": {
+          "absolute_gap_bins": [
+            {
+              "lower_inclusive": 0.0,
+              "query_count": 11,
+              "status": "POST_HOC_DIAGNOSTIC",
+              "upper_exclusive": 0.05,
+              "winner_accuracy": 0.8181818181818182
+            },
+            {
+              "lower_inclusive": 0.05,
+              "query_count": 16,
+              "status": "POST_HOC_DIAGNOSTIC",
+              "upper_exclusive": 0.1,
+              "winner_accuracy": 0.875
+            },
+            {
+              "lower_inclusive": 0.1,
+              "query_count": 30,
+              "status": "POST_HOC_DIAGNOSTIC",
+              "upper_exclusive": 0.2,
+              "winner_accuracy": 0.8333333333333334
+            },
+            {
+              "lower_inclusive": 0.2,
+              "query_count": 63,
+              "status": "POST_HOC_DIAGNOSTIC",
+              "upper_exclusive": 0.4,
+              "winner_accuracy": 0.47619047619047616
+            },
+            {
+              "lower_inclusive": 0.4,
+              "query_count": 80,
+              "status": "POST_HOC_DIAGNOSTIC",
+              "upper_exclusive": 1.000000000001,
+              "winner_accuracy": 0.525
+            }
+          ],
+          "actual_bm25_winner_count": 28,
+          "actual_bm25_winner_rate": 0.14,
+          "actual_qwen_winner_count": 172,
+          "actual_qwen_winner_rate": 0.86,
+          "bm25_choice_count": 68,
+          "bm25_choice_rate": 0.34,
+          "bm25_opportunities_captured": 8,
+          "bm25_opportunity_capture_rate": 0.2857142857142857,
+          "confusion_matrix": {
+            "actual_BM25_predicted_BM25": 8,
+            "actual_BM25_predicted_Qwen": 20,
+            "actual_Qwen_predicted_BM25": 60,
+            "actual_Qwen_predicted_Qwen": 112
+          },
+          "harmful_bm25_switch_rate": 0.8823529411764706,
+          "harmful_bm25_switches": 60,
+          "query_count": 200,
+          "qwen_choice_count": 132,
+          "qwen_choice_rate": 0.66,
+          "winner_accuracy": 0.6
+        },
+        "target_code_switched": null
+      },
+      "source": "ClimateFEVERHardNegatives",
+      "source_bootstrap": {
+        "code_switched": {
+          "ci_lower": -0.032543918000253934,
+          "ci_upper": 0.0048113375672271955,
+          "confidence_level": 0.95,
+          "observed_mean_difference": -0.01356129504520883,
+          "replicate_means_sha256": "1CA6F047F9BF2FC29F0D8265DC09A30A02280C3131B8DC031F7668F5411116B1",
+          "replicates": 2000,
+          "resampling_unit": "complete_source_query_group",
+          "seed": 20260809
+        },
+        "original": {
+          "ci_lower": -0.04019346117907389,
+          "ci_upper": 0.010080239893545945,
+          "confidence_level": 0.95,
+          "observed_mean_difference": -0.01487788451846475,
+          "replicate_means_sha256": "311F7E4F0594B412A5099101D7375F86071AA143D709F47891580B4C391FFF12",
+          "replicates": 2000,
+          "resampling_unit": "complete_source_query_group",
+          "seed": 20260809
+        }
+      },
+      "source_gate": {
+        "overall_source_gate_pass": false,
+        "source_cs_ci_lower": -0.032543918000253934,
+        "source_cs_ci_upper": 0.0048113375672271955,
+        "source_cs_difference_selector_minus_qwen": -0.01356129504520883,
+        "source_cs_gate_pass": false,
+        "source_cs_gate_rule": "95% paired-bootstrap lower bound > 0",
+        "source_original_ci_lower": -0.04019346117907389,
+        "source_original_ci_upper": 0.010080239893545945,
+        "source_original_difference_selector_minus_qwen": -0.01487788451846475,
+        "source_original_safety_pass": false,
+        "source_original_safety_rule": "95% paired-bootstrap lower bound >= 0"
+      },
+      "source_holdout_metrics": {
+        "arabzadeh_comparator": {
+          "reason": "No faithful existing implementation with registered features/objective was present at freeze.",
+          "status": "NOT_AVAILABLE"
+        },
+        "bootstrap_selector_minus_qwen": {
+          "code_switched": {
+            "ci_lower": -0.032543918000253934,
+            "ci_upper": 0.0048113375672271955,
+            "confidence_level": 0.95,
+            "observed_mean_difference": -0.01356129504520883,
+            "replicate_means_sha256": "1CA6F047F9BF2FC29F0D8265DC09A30A02280C3131B8DC031F7668F5411116B1",
+            "replicates": 2000,
+            "resampling_unit": "complete_source_query_group",
+            "seed": 20260809
+          },
+          "original": {
+            "ci_lower": -0.04019346117907389,
+            "ci_upper": 0.010080239893545945,
+            "confidence_level": 0.95,
+            "observed_mean_difference": -0.01487788451846475,
+            "replicate_means_sha256": "311F7E4F0594B412A5099101D7375F86071AA143D709F47891580B4C391FFF12",
+            "replicates": 2000,
+            "resampling_unit": "complete_source_query_group",
+            "seed": 20260809
+          }
+        },
+        "calibration_source": "ClimateFEVERHardNegatives FIT code-switched variants only",
+        "dataset": "ClimateFEVERHardNegatives",
+        "group_count": 200,
+        "scope": "holdout",
+        "selected_signal": "normalized_top1_minus_top2_score_margin",
+        "selected_tau": 0.2,
+        "selector_behavior": {
+          "code_switched": {
+            "absolute_gap_bins": [
+              {
+                "lower_inclusive": 0.0,
+                "query_count": 11,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.05,
+                "winner_accuracy": 0.8181818181818182
+              },
+              {
+                "lower_inclusive": 0.05,
+                "query_count": 16,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.1,
+                "winner_accuracy": 0.875
+              },
+              {
+                "lower_inclusive": 0.1,
+                "query_count": 30,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.2,
+                "winner_accuracy": 0.8333333333333334
+              },
+              {
+                "lower_inclusive": 0.2,
+                "query_count": 63,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.4,
+                "winner_accuracy": 0.47619047619047616
+              },
+              {
+                "lower_inclusive": 0.4,
+                "query_count": 80,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 1.000000000001,
+                "winner_accuracy": 0.525
+              }
+            ],
+            "actual_bm25_winner_count": 28,
+            "actual_bm25_winner_rate": 0.14,
+            "actual_qwen_winner_count": 172,
+            "actual_qwen_winner_rate": 0.86,
+            "bm25_choice_count": 68,
+            "bm25_choice_rate": 0.34,
+            "bm25_opportunities_captured": 8,
+            "bm25_opportunity_capture_rate": 0.2857142857142857,
+            "confusion_matrix": {
+              "actual_BM25_predicted_BM25": 8,
+              "actual_BM25_predicted_Qwen": 20,
+              "actual_Qwen_predicted_BM25": 60,
+              "actual_Qwen_predicted_Qwen": 112
+            },
+            "harmful_bm25_switch_rate": 0.8823529411764706,
+            "harmful_bm25_switches": 60,
+            "query_count": 200,
+            "qwen_choice_count": 132,
+            "qwen_choice_rate": 0.66,
+            "winner_accuracy": 0.6
+          },
+          "original": {
+            "absolute_gap_bins": [
+              {
+                "lower_inclusive": 0.0,
+                "query_count": 18,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.05,
+                "winner_accuracy": 0.8888888888888888
+              },
+              {
+                "lower_inclusive": 0.05,
+                "query_count": 13,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.1,
+                "winner_accuracy": 0.9230769230769231
+              },
+              {
+                "lower_inclusive": 0.1,
+                "query_count": 42,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.2,
+                "winner_accuracy": 0.8095238095238095
+              },
+              {
+                "lower_inclusive": 0.2,
+                "query_count": 55,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 0.4,
+                "winner_accuracy": 0.5454545454545454
+              },
+              {
+                "lower_inclusive": 0.4,
+                "query_count": 72,
+                "status": "POST_HOC_DIAGNOSTIC",
+                "upper_exclusive": 1.000000000001,
+                "winner_accuracy": 0.4305555555555556
+              }
+            ],
+            "actual_bm25_winner_count": 36,
+            "actual_bm25_winner_rate": 0.18,
+            "actual_qwen_winner_count": 164,
+            "actual_qwen_winner_rate": 0.82,
+            "bm25_choice_count": 61,
+            "bm25_choice_rate": 0.305,
+            "bm25_opportunities_captured": 10,
+            "bm25_opportunity_capture_rate": 0.2777777777777778,
+            "confusion_matrix": {
+              "actual_BM25_predicted_BM25": 10,
+              "actual_BM25_predicted_Qwen": 26,
+              "actual_Qwen_predicted_BM25": 51,
+              "actual_Qwen_predicted_Qwen": 113
+            },
+            "harmful_bm25_switch_rate": 0.8360655737704918,
+            "harmful_bm25_switches": 51,
+            "query_count": 200,
+            "qwen_choice_count": 139,
+            "qwen_choice_rate": 0.695,
+            "winner_accuracy": 0.615
+          }
+        },
+        "systems": {
+          "BGE-M3": {
+            "code_switched": {
+              "mrr": 0.1517425694367573,
+              "ndcg@10": 0.10079198227113814,
+              "recall@10": 0.12666666666666665
+            },
+            "delta_cs": {
+              "mrr": 0.0024361623388359233,
+              "ndcg@10": 0.0030463351955313245,
+              "recall@10": 0.005666666666666639
+            },
+            "original": {
+              "mrr": 0.14930640709792137,
+              "ndcg@10": 0.09774564707560682,
+              "recall@10": 0.12100000000000001
+            }
+          },
+          "BM25": {
+            "code_switched": {
+              "mrr": 0.17809345242805122,
+              "ndcg@10": 0.12161169925880368,
+              "recall@10": 0.14491666666666667
+            },
+            "delta_cs": {
+              "mrr": -0.044405052930341776,
+              "ndcg@10": -0.03666750342814541,
+              "recall@10": -0.060416666666666646
+            },
+            "original": {
+              "mrr": 0.222498505358393,
+              "ndcg@10": 0.1582792026869491,
+              "recall@10": 0.2053333333333333
+            }
+          },
+          "Oracle diagnostic": {
+            "code_switched": {
+              "mrr": 0.34642693041697215,
+              "ndcg@10": 0.24561470714178874,
+              "recall@10": 0.2796666666666667
+            },
+            "delta_cs": {
+              "mrr": -0.03649722647023984,
+              "ndcg@10": -0.026698215839173256,
+              "recall@10": -0.035666666666666624
+            },
+            "original": {
+              "mrr": 0.382924156887212,
+              "ndcg@10": 0.272312922980962,
+              "recall@10": 0.3153333333333333
+            }
+          },
+          "Qwen": {
+            "code_switched": {
+              "mrr": 0.2792496095411517,
+              "ndcg@10": 0.19607871770934174,
+              "recall@10": 0.233
+            },
+            "delta_cs": {
+              "mrr": -0.0440784161493854,
+              "ndcg@10": -0.02376379607549453,
+              "recall@10": -0.01774999999999996
+            },
+            "original": {
+              "mrr": 0.3233280256905371,
+              "ndcg@10": 0.21984251378483627,
+              "recall@10": 0.25075
+            }
+          },
+          "RRF": {
+            "code_switched": {
+              "mrr": 0.2776901386764613,
+              "ndcg@10": 0.1988274998624503,
+              "recall@10": 0.24241666666666667
+            },
+            "delta_cs": {
+              "mrr": -0.02396046398866164,
+              "ndcg@10": -0.032944450054992996,
+              "recall@10": -0.0635
+            },
+            "original": {
+              "mrr": 0.30165060266512295,
+              "ndcg@10": 0.2317719499174433,
+              "recall@10": 0.30591666666666667
+            }
+          },
+          "Selector": {
+            "code_switched": {
+              "mrr": 0.25443952794770036,
+              "ndcg@10": 0.18251742266413287,
+              "recall@10": 0.21549999999999997
+            },
+            "delta_cs": {
+              "mrr": -0.041459111807396254,
+              "ndcg@10": -0.022447206602238673,
+              "recall@10": -0.01766666666666672
+            },
+            "original": {
+              "mrr": 0.2958986397550966,
+              "ndcg@10": 0.20496462926637155,
+              "recall@10": 0.2331666666666667
+            }
+          }
+        },
+        "target_recalibration": false
+      },
+      "source_split_checksums": {
+        "assignment_sha256": "fb1514ce76470601464f51ade05877fe33b5850b5d1087a1f4dc52ddd0fcdf9b",
+        "source_query_groups_sha256": "49d53e935f3e9e54c252d9aa130107f0bff1e5e678d39d8aa325916f307dab5b"
+      },
+      "tables": {
+        "table1_climate_fit_signal_selection": {
+          "csv": "results/milestone2/tables/table1_climate_fit_signal_selection.csv",
+          "latex": "results/milestone2/tables/table1_climate_fit_signal_selection.tex",
+          "markdown": "results/milestone2/tables/table1_climate_fit_signal_selection.md"
+        },
+        "table2_climate_validation_tau_sweep": {
+          "csv": "results/milestone2/tables/table2_climate_validation_tau_sweep.csv",
+          "latex": "results/milestone2/tables/table2_climate_validation_tau_sweep.tex",
+          "markdown": "results/milestone2/tables/table2_climate_validation_tau_sweep.md"
+        },
+        "table3_climate_holdout_primary_results": {
+          "csv": "results/milestone2/tables/table3_climate_holdout_primary_results.csv",
+          "latex": "results/milestone2/tables/table3_climate_holdout_primary_results.tex",
+          "markdown": "results/milestone2/tables/table3_climate_holdout_primary_results.md"
+        },
+        "table4_arguana_transfer_results": {
+          "csv": "results/milestone2/tables/table4_arguana_transfer_results.csv",
+          "latex": "results/milestone2/tables/table4_arguana_transfer_results.tex",
+          "markdown": "results/milestone2/tables/table4_arguana_transfer_results.md"
+        },
+        "table5_gate_summary": {
+          "csv": "results/milestone2/tables/table5_gate_summary.csv",
+          "latex": "results/milestone2/tables/table5_gate_summary.tex",
+          "markdown": "results/milestone2/tables/table5_gate_summary.md"
+        }
+      },
+      "target": "ArguAna",
+      "target_bootstrap": null,
+      "target_executed": false,
+      "target_metrics": null,
+      "tests": {
+        "command": [
+          "D:\\Study\\Research\\Codeswitch\\.venv\\Scripts\\python.exe",
+          "-m",
+          "pytest",
+          "-q",
+          "tests/test_milestone2.py",
+          "tests/test_milestone2_semantic_freeze.py"
+        ],
+        "log_path": "results/milestone2/logs/pre_holdout_tests.txt",
+        "log_sha256": "5B659FF4AEC67A30B01248B8729FE2D4D43BAFDF7E75345EBA783DAB5A173AC0",
+        "output": ".....................                                                    [100%]\n21 passed in 0.24s",
+        "returncode": 0
+      },
+      "transfer_gate": null,
+      "validation_scores": [
+        {
+          "bm25_choice_count": 99,
+          "bm25_choice_rate": 0.495,
+          "code_switched_ndcg_at_10": 0.1437569694600204,
+          "qwen_choice_count": 101,
+          "qwen_choice_rate": 0.505,
+          "selected": false,
+          "tau": 0.0
+        },
+        {
+          "bm25_choice_count": 92,
+          "bm25_choice_rate": 0.46,
+          "code_switched_ndcg_at_10": 0.1469090035518398,
+          "qwen_choice_count": 108,
+          "qwen_choice_rate": 0.54,
+          "selected": false,
+          "tau": 0.05
+        },
+        {
+          "bm25_choice_count": 83,
+          "bm25_choice_rate": 0.415,
+          "code_switched_ndcg_at_10": 0.14976749050142463,
+          "qwen_choice_count": 117,
+          "qwen_choice_rate": 0.585,
+          "selected": false,
+          "tau": 0.1
+        },
+        {
+          "bm25_choice_count": 67,
+          "bm25_choice_rate": 0.335,
+          "code_switched_ndcg_at_10": 0.15033402075942073,
+          "qwen_choice_count": 133,
+          "qwen_choice_rate": 0.665,
+          "selected": false,
+          "tau": 0.15
+        },
+        {
+          "bm25_choice_count": 59,
+          "bm25_choice_rate": 0.295,
+          "code_switched_ndcg_at_10": 0.15196803668413628,
+          "qwen_choice_count": 141,
+          "qwen_choice_rate": 0.705,
+          "selected": true,
+          "tau": 0.2
+        }
+      ]
+    }
+  },
+  "milestone2_status": "MILESTONE 2 SOURCE GATE FAILED",
+  "missed_opportunity_count": 20,
+  "negative_paper_assessment": {
+    "best_fit": "secondary analysis, workshop/short-paper finding, or motivation for a new hypothesis",
+    "criteria": [
+      {
+        "assessment": "Narrow distinction remains, but it is high-risk rather than a method novelty claim.",
+        "confidence": "MODERATE",
+        "criterion": "Novelty of exact empirical question",
+        "evidence": "Existing audit found no exact all-conditions match, while generic QPP, confidence, routing, and complementarity mechanisms are established."
+      },
+      {
+        "assessment": "Useful preregistered source failure; not a statistically proven universal negative.",
+        "confidence": "STRONG",
+        "criterion": "Strength of evidence",
+        "evidence": "One frozen 200-query Climate holdout; selector-Qwen CI includes zero."
+      },
+      {
+        "assessment": "Insufficient for a broad standalone claim.",
+        "confidence": "STRONG",
+        "criterion": "Benchmark breadth",
+        "evidence": "One source benchmark; ArguAna was correctly not executed after the source gate failed."
+      },
+      {
+        "assessment": "Moderate postmortem value: complementarity exists, but false switches dominate.",
+        "confidence": "STRONG",
+        "criterion": "Explanatory value",
+        "evidence": "28 BM25 opportunities, 8 captured, 60 harmful switches, and oracle headroom above Qwen."
+      },
+      {
+        "assessment": "High novelty risk.",
+        "confidence": "STRONG",
+        "criterion": "Prior-work comparison",
+        "evidence": "Novelty audit identifies QuDAR, Arabzadeh, MoR, Query-Adaptive Hybrid Search, QPP, and code-mixed hybrid precedents."
+      },
+      {
+        "assessment": "Secondary analysis, workshop/short-paper finding, or motivation for a new preregistered hypothesis.",
+        "confidence": "MODERATE",
+        "criterion": "Best publication form",
+        "evidence": "The negative is narrow, source-only, and transfer was not observed."
+      },
+      {
+        "assessment": "Insufficient by itself.",
+        "confidence": "STRONG",
+        "criterion": "Standalone negative paper now",
+        "evidence": "No ArguAna transfer result, one source benchmark, and high mechanism-overlap risk."
+      }
+    ],
+    "reason": "One source benchmark, no authorized ArguAna transfer, selector CI including zero, and high novelty risk.",
+    "standalone_main_paper": false
+  },
+  "new_experiment_executed": false,
+  "no_new_protected_experiment": true,
+  "no_retuning": true,
+  "novelty_context": {
+    "closest_prior_works": [
+      "QuDAR",
+      "Arabzadeh et al.",
+      "MoR",
+      "Query-Adaptive Hybrid Search",
+      "QPP/coherence work",
+      "RouterRetriever",
+      "SETU-RAG",
+      "FIRE/code-mixed hybrid systems"
+    ],
+    "fresh_literature_review": "FRESH LITERATURE REVIEW REQUIRED before publication; none performed in Milestone 2.5.",
+    "overlap": "Confidence/QPP, relative strategy selection, routing, fusion, and complementarity are established mechanisms.",
+    "prior_work_file_hashes": {
+      "docs/claim_novelty_matrix.md": "09B6E6EAF4C88538289DA73D68D24553FE83158E4AE213602C5B6CDF8A8C1B25",
+      "docs/complementarity_interpretation_m1_5.md": "A8659370C527BFC6864E46D5BC2743D297A4864C55190DCDE744CDCF97F04082",
+      "docs/milestone1_5_decision.md": "16B23DDBFADBD3FA00B196734A56DF51DFE6BFA3141B130A15DB9E9362402ECD",
+      "docs/novelty_audit_m1_5.md": "B13F1256D5907AFC01FA9EA1F8A966B2F7D71F8D0DB11D58C6EDAB4679C8E218"
+    },
+    "remaining_distinction": "A narrow saved-data empirical calibration/transfer question for fixed BM25 versus fixed Qwen on benchmark-provided zh-en variants."
+  },
+  "novelty_risk": "HIGH",
+  "oracle_headroom": {
+    "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+    "oracle_minus_qwen": 0.049535989432447,
+    "oracle_minus_selector": 0.06309728447765586,
+    "selector_minus_qwen": -0.013561295045208865
+  },
+  "postmortem_revision": "milestone_2_5_saved_data_only_v1",
+  "recommended_path": "CONDITIONAL GO — NEW HYPOTHESIS REQUIRED",
+  "report_path": "docs/milestone2_5_scientific_postmortem.md",
+  "report_sha256": "03E6F1BC0025D7EC6AFB5D1723C0B5DDBF7BBC5A796825664E4BAB996E730BB8",
+  "rrf_difference": {
+    "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+    "rrf_minus_qwen": 0.0027487821531085588,
+    "rrf_minus_selector": 0.016310077198317424
+  },
+  "selected_signal": "normalized_top1_minus_top2_score_margin",
+  "selected_tau": 0.2,
+  "selector_vs_qwen": {
+    "cs_ci_lower": -0.032543918000253934,
+    "cs_ci_upper": 0.0048113375672271955,
+    "cs_difference": -0.013561295045208865,
+    "cs_metrics": {
+      "BGE-M3": {
+        "mrr": 0.1517425694367573,
+        "ndcg@10": 0.10079198227113814,
+        "recall@10": 0.12666666666666665
+      },
+      "BM25": {
+        "mrr": 0.17809345242805122,
+        "ndcg@10": 0.12161169925880368,
+        "recall@10": 0.14491666666666667
+      },
+      "Oracle diagnostic": {
+        "mrr": 0.34642693041697215,
+        "ndcg@10": 0.24561470714178874,
+        "recall@10": 0.2796666666666667
+      },
+      "Qwen": {
+        "mrr": 0.2792496095411517,
+        "ndcg@10": 0.19607871770934174,
+        "recall@10": 0.233
+      },
+      "RRF": {
+        "mrr": 0.2776901386764613,
+        "ndcg@10": 0.1988274998624503,
+        "recall@10": 0.24241666666666667
+      },
+      "Selector": {
+        "mrr": 0.25443952794770036,
+        "ndcg@10": 0.18251742266413287,
+        "recall@10": 0.21549999999999997
+      }
+    },
+    "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+    "original_ci_lower": -0.04019346117907389,
+    "original_ci_upper": 0.010080239893545945,
+    "original_difference": -0.014877884518464723,
+    "original_metrics": {
+      "BGE-M3": {
+        "mrr": 0.14930640709792137,
+        "ndcg@10": 0.09774564707560682,
+        "recall@10": 0.12100000000000001
+      },
+      "BM25": {
+        "mrr": 0.222498505358393,
+        "ndcg@10": 0.1582792026869491,
+        "recall@10": 0.2053333333333333
+      },
+      "Oracle diagnostic": {
+        "mrr": 0.382924156887212,
+        "ndcg@10": 0.272312922980962,
+        "recall@10": 0.3153333333333333
+      },
+      "Qwen": {
+        "mrr": 0.3233280256905371,
+        "ndcg@10": 0.21984251378483627,
+        "recall@10": 0.25075
+      },
+      "RRF": {
+        "mrr": 0.30165060266512295,
+        "ndcg@10": 0.2317719499174433,
+        "recall@10": 0.30591666666666667
+      },
+      "Selector": {
+        "mrr": 0.2958986397550966,
+        "ndcg@10": 0.20496462926637155,
+        "recall@10": 0.2331666666666667
+      }
+    }
+  },
+  "signal_gain_correlations": {
+    "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+    "fit_dispersion": {
+      "auroc_BM25": 0.5087653014961463,
+      "spearman_G_vs_Qwen_minus_BM25": 0.03501875895146053
+    },
+    "fit_margin": {
+      "auroc_BM25": 0.5329130594356527,
+      "spearman_G_vs_Qwen_minus_BM25": 0.034891340371051016
+    },
+    "holdout_auroc_BM25": 0.4749792358803987,
+    "holdout_spearman_G_vs_Qwen_minus_BM25": 0.07226899886731906,
+    "holdout_spearman_minus_G_vs_BM25_minus_Qwen": 0.07226899886731906
+  },
+  "source_artifact_row_counts": {
+    "fit": 600,
+    "holdout_cs": 200,
+    "holdout_original": 200,
+    "validation": 200
+  },
+  "tables": {
+    "table_A_qpp_signal_diagnostic_quality": {
+      "csv": "results/milestone2_5/tables/table_A_qpp_signal_diagnostic_quality.csv",
+      "latex": "results/milestone2_5/tables/table_A_qpp_signal_diagnostic_quality.tex",
+      "markdown": "results/milestone2_5/tables/table_A_qpp_signal_diagnostic_quality.md"
+    },
+    "table_B_holdout_switching_decomposition": {
+      "csv": "results/milestone2_5/tables/table_B_holdout_switching_decomposition.csv",
+      "latex": "results/milestone2_5/tables/table_B_holdout_switching_decomposition.tex",
+      "markdown": "results/milestone2_5/tables/table_B_holdout_switching_decomposition.md"
+    },
+    "table_C_failure_mode_evidence_matrix": {
+      "csv": "results/milestone2_5/tables/table_C_failure_mode_evidence_matrix.csv",
+      "latex": "results/milestone2_5/tables/table_C_failure_mode_evidence_matrix.tex",
+      "markdown": "results/milestone2_5/tables/table_C_failure_mode_evidence_matrix.md"
+    },
+    "table_D_publication_viability_assessment": {
+      "csv": "results/milestone2_5/tables/table_D_publication_viability_assessment.csv",
+      "latex": "results/milestone2_5/tables/table_D_publication_viability_assessment.tex",
+      "markdown": "results/milestone2_5/tables/table_D_publication_viability_assessment.md"
+    }
+  },
+  "validation_behavior": [
+    {
+      "bm25_choice_rate": 0.495,
+      "code_switched_ndcg_at_10": 0.1437569694600204,
+      "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+      "qwen_choice_rate": 0.505,
+      "selected": false,
+      "tau": 0.0
+    },
+    {
+      "bm25_choice_rate": 0.46,
+      "code_switched_ndcg_at_10": 0.1469090035518398,
+      "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+      "qwen_choice_rate": 0.54,
+      "selected": false,
+      "tau": 0.05
+    },
+    {
+      "bm25_choice_rate": 0.415,
+      "code_switched_ndcg_at_10": 0.14976749050142463,
+      "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+      "qwen_choice_rate": 0.585,
+      "selected": false,
+      "tau": 0.1
+    },
+    {
+      "bm25_choice_rate": 0.335,
+      "code_switched_ndcg_at_10": 0.15033402075942073,
+      "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+      "qwen_choice_rate": 0.665,
+      "selected": false,
+      "tau": 0.15
+    },
+    {
+      "bm25_choice_rate": 0.295,
+      "code_switched_ndcg_at_10": 0.15196803668413628,
+      "diagnostic_status": "POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA",
+      "qwen_choice_rate": 0.705,
+      "selected": true,
+      "tau": 0.2
+    }
+  ]
+}

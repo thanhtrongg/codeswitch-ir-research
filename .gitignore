@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE and local agent metadata
+.vscode/
+.idea/
+.codex/
+.agents/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and private credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Caches
+.cache/
+huggingface/
+torch/
+pip-cache/
+uv-cache/
+results/**/.matplotlib/
+
+# Research data, indexes, and model artifacts
+data/raw/
+data/downloads/
+datasets/
+checkpoints/
+models/
+embeddings/
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.faiss
+*.sqlite
+*.sqlite3
+*.db
+*.bin
+
+# Large raw per-query run outputs; compact summaries remain trackable.
+results/runs/**/per_query.jsonl
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp

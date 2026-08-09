@@ -1,0 +1,4021 @@
+{
+  "protocol_id": "milestone_2_rq1_v1",
+  "resource": "UTokyo-Yokoya-Lab/ClimateFEVER_hardnegatives_CS-MTEB",
+  "short_name": "ClimateFEVERHardNegatives",
+  "language_pair": "zh-en",
+  "unit": "source_dataset::query_id",
+  "seed": 20260809,
+  "algorithm": "sort source_query_id by sha256(f'{seed}|{source_query_id}'), then assign contiguous 60/20/20 blocks",
+  "fit_fraction": 0.6,
+  "validation_fraction": 0.2,
+  "post_exploratory_frozen_holdout_fraction": 0.2,
+  "group_count": 1000,
+  "variant_count": 2000,
+  "group_variant_counts": {
+    "2": 1000
+  },
+  "source_query_groups_sha256": "49d53e935f3e9e54c252d9aa130107f0bff1e5e678d39d8aa325916f307dab5b",
+  "assignment_sha256": "fb1514ce76470601464f51ade05877fe33b5850b5d1087a1f4dc52ddd0fcdf9b",
+  "assignments": [
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1001",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1003",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1011",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1013",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1017",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1019",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::102",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1020",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1021",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1022",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1024",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1038",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1048",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1049",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::105",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1050",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1052",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1056",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1057",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1061",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1065",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1067",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1069",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1075",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::108",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1082",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1084",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1087",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1089",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1090",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1092",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1097",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1098",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::11",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1109",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1112",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1127",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::113",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1133",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1135",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1138",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1139",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1141",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1142",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1143",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1144",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1146",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1149",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1150",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1151",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1154",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1155",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1156",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1157",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1160",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1163",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1164",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1166",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1169",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1171",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1186",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1188",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::120",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1202",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1205",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1211",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1212",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1219",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1222",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1223",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1224",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::123",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1230",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1235",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1237",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1239",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1240",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1245",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1246",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1251",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1253",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1259",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::126",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1260",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1265",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1266",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1268",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::127",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1270",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1271",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1273",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1279",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::129",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1292",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1293",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1296",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1300",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1303",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1305",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1307",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1308",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1310",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1312",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1313",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1314",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1317",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::132",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1322",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1324",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1326",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1331",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1333",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1334",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1342",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1353",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1354",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1360",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1362",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1367",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1369",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::137",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1374",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1375",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1376",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1378",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::138",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1383",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1386",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1389",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::139",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1390",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1395",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1397",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1399",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1404",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::141",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1410",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1411",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1414",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1416",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::142",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1420",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1421",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1425",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1426",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::143",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1430",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1431",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1433",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1435",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1441",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1444",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1448",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1449",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1451",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1453",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1454",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1455",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1460",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1462",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1463",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1465",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1467",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1469",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1473",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1475",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1476",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1479",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::148",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1480",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1482",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1484",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1486",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1488",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1492",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1495",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1498",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1499",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1502",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1504",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1506",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1507",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1510",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1512",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1513",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1515",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1516",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1523",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1525",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1529",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1531",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1532",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1533",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1539",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1544",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1546",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1547",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1548",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1549",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1553",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1555",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1558",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1559",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1560",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1562",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1567",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1569",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1576",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1577",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1578",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1579",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1580",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1582",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1584",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1586",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1591",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1594",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1598",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1599",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1601",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1602",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1605",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1606",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1607",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1608",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1609",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::161",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1614",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1615",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1616",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1617",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1623",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1625",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1627",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::163",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1631",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1634",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::164",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1640",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1644",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1645",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1647",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1648",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1649",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1652",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1653",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1654",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1655",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1656",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1658",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1659",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1660",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1662",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1663",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1665",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1667",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1668",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1669",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1670",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1673",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1674",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1675",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1677",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1678",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1688",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1689",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::169",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1691",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1692",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1700",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1703",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1705",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1707",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1708",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1714",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1715",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1718",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1719",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1721",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1722",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1725",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::173",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1741",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1743",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1744",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1745",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1747",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1751",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1753",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1756",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1758",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1761",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1765",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1769",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1771",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1774",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1776",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1782",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1789",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1790",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1793",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1794",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1796",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1798",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::180",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1802",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1807",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::181",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1813",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1815",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1819",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1821",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1822",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1824",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1825",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1829",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1830",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1834",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1837",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1842",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1845",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1849",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::185",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1850",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1851",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1853",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1854",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1859",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1861",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1862",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1865",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1866",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1867",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1868",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1869",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1871",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1872",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1874",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1877",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1878",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1880",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1882",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::189",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1890",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1893",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1895",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::19",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1901",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1908",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1909",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1910",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1912",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1919",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1923",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1931",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1932",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1933",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1938",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::194",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1943",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1944",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1945",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1947",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1948",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1951",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1953",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::196",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1960",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1962",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1963",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1968",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::197",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1971",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1973",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1975",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1977",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1983",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1984",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1985",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1987",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1988",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::199",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1995",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1996",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1998",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::1999",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::200",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2000",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2004",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2008",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2009",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2012",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2013",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2020",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2021",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2024",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2027",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2028",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2029",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2036",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2037",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2038",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::204",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2041",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2042",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2047",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2048",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2049",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2052",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2055",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2057",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2059",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2060",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2062",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2065",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2067",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2068",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2069",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::207",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2070",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2071",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2075",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2076",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2078",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2081",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2084",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2086",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2090",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2092",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2093",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2096",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2099",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::21",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2104",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::211",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2111",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2113",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2117",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2118",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2119",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2121",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2122",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2123",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2127",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2130",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2132",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2134",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2136",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::214",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2141",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2142",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2147",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2150",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2152",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2153",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::216",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2160",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2161",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2163",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2164",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2165",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2168",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2170",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2178",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2181",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2184",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2187",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2189",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2193",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2201",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2202",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2206",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2208",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2210",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2212",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2214",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2215",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2223",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2229",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2238",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2241",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2243",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2244",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2246",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2248",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2250",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2255",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2260",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2261",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2262",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2263",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2267",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2268",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2275",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2277",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2283",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2284",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2290",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2293",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2302",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2303",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2304",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2305",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2308",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2313",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2317",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2319",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2320",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2323",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2326",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2328",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2329",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2333",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2335",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2336",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2338",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2347",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2358",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::236",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2360",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2361",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2365",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2366",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2369",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::237",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2370",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2374",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2377",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2381",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2384",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2387",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2395",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2396",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::240",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2400",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2401",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2406",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2409",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2410",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2411",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2413",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2422",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2423",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2427",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2428",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::243",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::244",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2441",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2444",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2445",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2449",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2455",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2457",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2460",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2461",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2468",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2474",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2478",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::248",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2484",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2485",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2486",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2487",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2489",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2493",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2494",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2497",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2499",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::250",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2500",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2501",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2508",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2510",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2511",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2520",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2521",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2523",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2536",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2538",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2539",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::254",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2540",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2542",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2553",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2556",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2560",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2561",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2562",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2568",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::257",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2570",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2571",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2577",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2579",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2580",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2587",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2588",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2590",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2599",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2600",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2603",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2606",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2607",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2608",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2612",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2613",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2618",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2620",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2623",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2630",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2643",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2650",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2656",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2657",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2664",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2666",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2668",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2671",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2678",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2679",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::268",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2682",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2687",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2689",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2693",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2694",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2698",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::27",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2702",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2704",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2706",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2707",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2709",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2710",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2711",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2712",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::272",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2721",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2726",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2729",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2733",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2735",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2736",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2741",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2744",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2745",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::275",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2750",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2754",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2755",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2763",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2765",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2766",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2768",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2773",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2774",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2780",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2782",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2783",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2788",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2789",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2790",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2794",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2796",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2798",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2799",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::28",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2800",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2809",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::281",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2813",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2815",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2818",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2819",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::282",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2822",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2826",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2834",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2835",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2836",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2839",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::284",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2841",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2845",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2849",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2853",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2857",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2862",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2867",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2869",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::287",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2870",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2871",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2877",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2880",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2881",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2887",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2888",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2890",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2894",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2895",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2897",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2898",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2901",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2907",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2914",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2915",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2916",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2918",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2921",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2922",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2927",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::293",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2935",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2939",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2942",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2945",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2948",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2949",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2951",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2953",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2961",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2963",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2966",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2967",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2970",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2973",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2977",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::298",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2981",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2983",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2989",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2991",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2992",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2994",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::2997",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::30",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3000",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3004",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3008",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3009",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3017",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::302",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3024",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3044",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3046",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3047",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::305",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3052",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3056",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3059",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3063",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3064",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3068",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3069",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::307",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3070",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3072",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3082",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3084",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3090",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3093",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::310",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3102",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3105",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3110",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3121",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3123",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3125",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3130",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::3134",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::331",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::337",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::340",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::344",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::348",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::35",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::350",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::351",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::353",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::356",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::357",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::358",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::363",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::368",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::369",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::375",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::376",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::377",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::378",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::38",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::381",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::383",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::388",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::390",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::398",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::399",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::400",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::401",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::404",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::409",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::41",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::412",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::418",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::419",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::424",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::430",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::434",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::435",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::436",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::44",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::441",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::447",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::449",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::451",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::454",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::455",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::463",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::469",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::470",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::473",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::474",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::478",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::484",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::493",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::494",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::495",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::499",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::502",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::503",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::506",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::51",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::512",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::519",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::520",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::527",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::528",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::530",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::531",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::532",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::534",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::539",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::548",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::55",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::551",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::554",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::555",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::556",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::559",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::564",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::565",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::576",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::577",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::578",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::581",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::586",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::593",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::598",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::6",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::60",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::603",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::614",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::615",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::616",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::619",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::620",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::621",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::622",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::625",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::628",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::633",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::634",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::637",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::638",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::644",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::645",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::646",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::648",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::649",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::65",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::656",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::661",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::662",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::663",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::665",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::667",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::669",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::67",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::676",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::677",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::678",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::687",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::688",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::689",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::69",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::695",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::696",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::701",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::702",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::703",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::71",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::710",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::712",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::721",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::724",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::736",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::74",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::741",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::742",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::75",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::752",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::756",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::757",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::76",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::761",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::762",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::763",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::764",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::768",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::77",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::770",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::774",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::775",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::776",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::784",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::785",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::788",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::789",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::79",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::791",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::797",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::799",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::802",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::803",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::806",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::809",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::811",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::812",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::814",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::815",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::816",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::817",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::819",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::82",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::820",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::821",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::822",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::824",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::826",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::828",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::830",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::832",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::839",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::840",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::849",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::85",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::851",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::859",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::86",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::862",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::863",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::864",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::868",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::871",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::880",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::888",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::892",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::893",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::896",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::904",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::906",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::909",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::91",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::910",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::914",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::917",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::920",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::925",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::926",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::93",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::930",
+      "assignment": "post_exploratory_frozen_holdout"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::932",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::938",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::939",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::942",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::945",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::95",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::957",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::97",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::972",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::978",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::979",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::98",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::982",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::983",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::99",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::990",
+      "assignment": "fit"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::993",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::995",
+      "assignment": "validation"
+    },
+    {
+      "source_query_id": "mteb/ClimateFEVER_test_top_250_only_w_correct-v2::997",
+      "assignment": "fit"
+    }
+  ]
+}

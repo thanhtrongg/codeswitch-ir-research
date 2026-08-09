@@ -1,0 +1,16 @@
+{
+  "arguana_outcomes_read": false,
+  "created_utc": "2026-08-09T05:43:09.633384+00:00",
+  "csr_l_read": false,
+  "milestone2_record_verified": true,
+  "new_experiment_executed": false,
+  "original_milestone2_output_manifest_verified": true,
+  "posthoc_diagnostics_labeled": true,
+  "source_artifact_row_counts": {
+    "fit": 600,
+    "holdout_cs": 200,
+    "holdout_original": 200,
+    "validation": 200
+  },
+  "status": "PASS"
+}

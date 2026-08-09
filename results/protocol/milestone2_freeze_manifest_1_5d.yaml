@@ -1,0 +1,113 @@
+manifest_id: milestone_1_5d_milestone_2_freeze
+protocol_id: milestone_2_rq1_v1
+freeze_revision: milestone_1_5d
+supersedes: milestone_1_5c
+reason: remove_original_query_outcomes_from_threshold_tuning
+freeze_status: complete
+readiness: READY_FOR_MILESTONE_2_IMPLEMENTATION
+execution_status: not_executed
+execution_authorized: false
+created_date: 2026-08-09
+
+threshold_selection:
+  data: Climate_source_validation_code_switched_variants_only
+  objective: highest_code_switched_nDCG_at_10
+  tie_breaks:
+    - smaller_tau
+    - deterministic_lexical_serialization_order
+  original_query_nDCG_used: false
+  Delta_CS_used: false
+  original_query_outcomes_used: false
+  implementation_choices_influenced: false
+  grid: [0.00, 0.05, 0.10, 0.15, 0.20]
+
+original_query_role:
+  timing: after_method_freeze_only
+  allowed_uses:
+    - safety_reporting
+    - Delta_CS_reporting
+    - analysis
+  influences:
+    signal_selection: false
+    CDF_fitting: false
+    threshold_selection: false
+    threshold_tie_breaking: false
+    implementation_choice: false
+
+frozen_decisions_unchanged:
+  research_question: unchanged_from_1_5c
+  primary_source: ClimateFEVERHardNegatives
+  transfer_target: ArguAna
+  primary_direction: ClimateFEVERHardNegatives_to_ArguAna
+  reverse_transfer: NOT_REGISTERED
+  qwen_model: Qwen3-Embedding-0.6B
+  qwen_revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+  primary_baseline: Qwen
+  secondary_baseline: BM25
+  reference_only_dense_comparator: BGE-M3
+  active_signals:
+    - normalized_top1_minus_top2_score_margin
+    - top_k_score_dispersion
+  removed_signal: retrieved_set_embedding_coherence
+  k: 10
+  epsilon: 1.0e-12
+  rrf_baseline_only: true
+  rrf_k: 60
+  csr_l_final_boundary: untouched
+
+source_split:
+  path: results/protocol/milestone2_climate_source_split.json
+  seed: 20260809
+  unit: source_dataset::query_id
+  group_count: 1000
+  fit_groups: 600
+  validation_groups: 200
+  post_exploratory_frozen_holdout_groups: 200
+  source_query_groups_sha256: 49d53e935f3e9e54c252d9aa130107f0bff1e5e678d39d8aa325916f307dab5b
+  assignment_sha256: fb1514ce76470601464f51ade05877fe33b5850b5d1087a1f4dc52ddd0fcdf9b
+  regenerated: false
+  modified: false
+
+leakage_validation:
+  raw_artifact_revalidation:
+    status: pass
+    source_qualified_development_final_overlap: 0
+    evidence:
+      - results/audit/dataset_overlap.json
+      - results/audit/source_query_overlap.csv
+  dataset_backed_validator:
+    status: inconclusive_timeout
+    timeout_seconds: 180
+    interpretation: >-
+      Operational metadata-resolution timeout only; not evidence of leakage or
+      validator failure, and it does not supersede the independent raw-artifact
+      PASS.
+
+frozen_files:
+  data_protocol:
+    path: configs/data_protocol.yaml
+    sha256: 856357D502434A2A12101FB476FF3F86B4A30E703810E6AA7D8EB8D8752954D8
+  protocol_config:
+    path: configs/milestone2_protocol.yaml
+    sha256: 482090EFD81A1C85730D00F87A5DE57CB37FF0F6EAB11CDA2B3F0C7A2E76293A
+  preregistration:
+    path: docs/milestone2_preregistration.md
+    sha256: C871B8CD3897596F819A3DCB46CA8875C1F728E2094AF802A9FB4B2F81F702DF
+  final_protocol_fix_report:
+    path: docs/milestone1_5d_final_protocol_fix.md
+    sha256: E810FA3022958328DD502362FEAD487477DC98A5C64444C9327A09B18D5495AD
+  source_split:
+    path: results/protocol/milestone2_climate_source_split.json
+    sha256: FB93CC45AF551B51E33BDB4195FA7AB9295AB7375AB223A4AD996482C97F4577
+  semantic_validation_test:
+    path: tests/test_milestone2_semantic_freeze.py
+    sha256: 0FA6A097AC73F246E759420171B93DFFB4B6920C0F25C9ECFC43561250446C73
+  superseded_1_5c_manifest:
+    path: results/protocol/milestone2_freeze_manifest_1_5c.yaml
+    sha256: 73A774F3A7DB9CC228F7FA2B6800D69926805483B513D06533C11E27568478FC
+
+execution_stop:
+  milestone2_experiment_executed: false
+  new_experimental_outcomes_used: false
+  human_approval_required: true
+  stop_after_1_5d: true

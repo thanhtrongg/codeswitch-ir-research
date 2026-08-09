@@ -1,0 +1,184 @@
+manifest_id: milestone_1_5b_milestone_2_freeze
+protocol_id: milestone_2_rq1_v1
+freeze_revision: milestone_1_5b
+freeze_status: complete
+execution_status: not_executed
+execution_authorized: false
+created_date: 2026-08-09
+
+research_question_status:
+  retained: conditional_go_for_one_narrow_empirical_calibration_transfer_question
+  no_go:
+    - structure_only_alpha
+    - cmi_or_switch_ratio_routing
+    - bm25_dense_score_fusion
+    - rrf_as_a_proposed_method
+    - generic_routing_adaptive_alpha_or_confidence_routing
+  wording_correction: >-
+    Development variants are benchmark-provided zh-en CS-MTEB variants reported
+    by the audit as LLM-generated; naturally occurring or human-authored
+    development evidence is not claimed.
+  holdout_interpretation: >-
+    Milestone 1 analyzed all 2,406 development groups exploratorily. The
+    registered source holdout is procedurally protected after exploration, not
+    historically untouched. CSR-L is the truly untouched final boundary.
+
+primary_direction:
+  source: UTokyo-Yokoya-Lab/ClimateFEVER_hardnegatives_CS-MTEB
+  target: UTokyo-Yokoya-Lab/arguana_CS-MTEB
+  reverse_direction: not_registered
+  source_selection_reason: >-
+    ClimateFEVERHardNegatives had the larger Milestone 1 BM25/Qwen disagreement
+    and diagnostic oracle headroom. Target outcomes cannot affect selection or
+    tuning.
+
+frozen_files:
+  protocol_config:
+    path: configs/milestone2_protocol.yaml
+    sha256: D577A9C0D468A912AC91B61F9B21EB625A55D270D9E93FB5598646757ED63F02
+  preregistration:
+    path: docs/milestone2_preregistration.md
+    sha256: 1E7A04095A85EB0632864395BFB62584484A2B690545769D3C6F170069F136F8
+  data_protocol:
+    path: configs/data_protocol.yaml
+    sha256: 856357D502434A2A12101FB476FF3F86B4A30E703810E6AA7D8EB8D8752954D8
+  benchmark_catalog:
+    path: configs/benchmarks.yaml
+    sha256: 4F4C2BC248FEE43C55B6316FEB0C599F5BED14A0BAB3D2A93D9F6E29FFF74E82
+  split_manifest:
+    path: results/protocol/milestone2_climate_source_split.json
+    sha256: FB93CC45AF551B51E33BDB4195FA7AB9295AB7375AB223A4AD996482C97F4577
+  split_materialization_utility:
+    path: scripts/materialize_m2_source_split.py
+    sha256: EB1532808218CBA99E8C8EDEEB57CC8CC16C6239AAD62A5852FB27C5B681349B
+  milestone1_5_decision:
+    path: docs/milestone1_5_decision.md
+    sha256: 16B23DDBFADBD3FA00B196734A56DF51DFE6BFA3141B130A15DB9E9362402ECD
+  freeze_report:
+    path: docs/milestone1_5b_freeze_report.md
+    sha256: 63EC280A2D9D29D2464F0EFD7A1C5C255D01DF0EC541247FB05DDE91B6C0FA26
+
+source_split:
+  unit: source_dataset::query_id
+  seed: 20260809
+  algorithm: >-
+    Sort exact source_query_id values by sha256(f'{seed}|{source_query_id}')
+    hexadecimal digest, then assign contiguous 60/20/20 blocks.
+  source_query_group_count: 1000
+  variant_count: 2000
+  fit_group_count: 600
+  validation_group_count: 200
+  post_exploratory_frozen_holdout_group_count: 200
+  variants_kept_together: true
+  source_query_groups_sha256: 49d53e935f3e9e54c252d9aa130107f0bff1e5e678d39d8aa325916f307dab5b
+  assignment_sha256: fb1514ce76470601464f51ade05877fe33b5850b5d1087a1f4dc52ddd0fcdf9b
+  target_split: none_selection_free_transfer_evaluation_only
+
+baseline_artifacts:
+  qwen:
+    model_id: Qwen/Qwen3-Embedding-0.6B
+    revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+    effective_max_sequence_length: 512
+    tokenizer_truncation: true
+    padding_strategy: longest_in_batch_dynamic_padding
+    inference_dtype: torch.float16
+    climate_batch_size: 32
+    arguana_batch_size: 16
+    climate_run_config_sha256: 0E133D487734D1FE202E7EFC53322D5A6175DBE0A3B5C9AB74E8BB1F958FF483
+    arguana_run_config_sha256: 79E7D057B12719C7E74F1D2D9BCED04AD4E658FD0062E42397157F5C11372CF0
+  bm25:
+    climate_run_config_sha256: 6CB7DEE15FD283A6A31EB7257BF8486457848038AB0FA697C5CF8D931CCFF58D
+    arguana_run_config_sha256: 79EAA89F04B73296D4506BEF3D02BE3FCC571241E2384E1A77DE60E74B7C7ADF
+
+candidate_method:
+  id: unlabeled_relative_qpp_hard_selector_v1
+  top_k: 10
+  epsilon: 1.0e-12
+  active_signal_families:
+    - normalized_top1_minus_top2_score_margin
+    - top_k_score_dispersion
+  signal_selection_data: Climate_source_fit_outcomes_only
+  signal_selection_metric: mean_per_query_winner_classification_accuracy
+  winner_label: BM25_only_if_BM25_nDCG_at_10_strictly_exceeds_Qwen_else_Qwen
+  tie_order: [margin, dispersion]
+  removed_signal:
+    id: retrieved_set_embedding_coherence
+    status: removed_before_selection
+    reason: no_validated_Qwen_Climate_corpus_embedding_cache
+    existing_cache_observed: BGE_M3_Climate_only
+    qwen_run_cache_path: null
+    qwen_run_embeddings_persisted: false
+    new_dense_encoding_authorized: false
+  formulas:
+    margin: >-
+      M_r(q)=(s_r,1-s_r,2)/(abs(s_r,1-s_r,k)+epsilon); if the denominator is
+      <= epsilon set M_r(q)=0.
+    dispersion: >-
+      z_r,i=(s_r,i-s_r,k)/(s_r,1-s_r,k+epsilon); if the score range is <=
+      epsilon set all z values to zero; otherwise D_r(q) is population std,
+      ddof=0.
+  cdf_normalization:
+    source_fit_only: true
+    formula: F_r(x)=(1/N_fit)*sum(indicator(S_r(q)<=x)); P_r(q)=F_r(S_r(q)); G=P_Qwen-P_BM25
+    ties_included: true
+    frozen_for_target_transfer: true
+    target_recalibration: false
+  hard_rule:
+    abs_G_le_tau: Qwen
+    G_gt_tau: Qwen
+    G_lt_negative_tau: BM25
+    tau_grid: [0.00, 0.05, 0.10, 0.15, 0.20]
+    threshold_selection_data: Climate_source_validation_only
+    threshold_objective: highest_code_switched_nDCG_at_10
+    threshold_ties: [higher_original_nDCG_at_10, smaller_abs_Delta_CS, smaller_tau, lexical_serialization_order]
+    no_fusion: true
+    no_exceptions: true
+
+comparators:
+  rrf:
+    status: fixed_baseline_only
+    parameter_k: 60
+    candidate_depth: 1000
+    formula: RRF_score(d)=sum_r 1/(60+rank_r(d)); ranks 1-based; missing ranks contribute zero
+    tuning: prohibited
+  arabzadeh:
+    status: NOT_AVAILABLE_UNLESS_FAITHFULLY_REPRODUCIBLE
+    paper_doi: https://doi.org/10.1145/3459637.3482159
+    exact_features_objective_deviations: not_identified_at_freeze
+    substitute_implementation: prohibited
+  oracle:
+    status: diagnostic_only
+
+decision_gates:
+  source: Climate_post_exploratory_frozen_holdout
+  source_success: selector_minus_Qwen_code_switched_nDCG_at_10_bootstrap_95_lower_bound_gt_0
+  transfer_target: ArguAna_fixed_transfer
+  transfer_success: selector_minus_Qwen_code_switched_nDCG_at_10_point_estimate_gte_0
+  failed_transfer: positive_source_gate_and_failed_transfer_target_gate
+  original_query_safety: no_negative_selector_minus_Qwen_bootstrap_95_lower_bound
+  bootstrap: paired_complete_source_query_group_resampling_2000_replicates_seed_20260809
+  baseline_reference: Qwen_only
+
+dense_policy:
+  no_new_dense_encoding_before_milestone2_execution: true
+  development_new_encoding: prohibited
+  final_encoding: only_after_gate_checksum_freeze_and_human_approval
+  milestone_1_5b_final_encoding_performed: false
+  active_run_interference: prohibited
+
+audit_record:
+  raw_manifest_revalidation: passed_in_milestone1_5
+  validate_audit_status: inconclusive_timeout
+  validate_audit_timeout_seconds: 180
+  timeout_stage: cached_HuggingFace_dataset_metadata_resolution
+  retrieval_or_gpu_launched: false
+  timeout_is_evidence_of_pass: false
+  timeout_is_evidence_of_failure: false
+  independent_raw_overlap_artifacts_retained: true
+
+final_boundary:
+  resources: CSR-L_six_registered_resources
+  languages: [zh, ja]
+  untouched_before_freeze: true
+  selection_allowed: false
+  execution_in_this_freeze: false

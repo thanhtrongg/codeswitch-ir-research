@@ -1,0 +1,12 @@
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "original", "metric": "official", "score": 0.27854070014922166, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "original", "metric": "ndcg@10", "score": 0.27854070014922166, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "original", "metric": "recall@10", "score": 0.604551920341394, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "original", "metric": "mrr", "score": 0.19034519441380096, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "code_switched", "metric": "official", "score": 0.2541979267633285, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "code_switched", "metric": "ndcg@10", "score": 0.2541979267633285, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "code_switched", "metric": "recall@10", "score": 0.5576102418207681, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "code_switched", "metric": "mrr", "score": 0.17389914238207385, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "degradation", "metric": "official", "score": -0.02434277338589319, "relative_score": -0.0873939548972632, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "degradation", "metric": "ndcg@10", "score": -0.02434277338589319, "relative_score": -0.0873939548972632, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "degradation", "metric": "recall@10", "score": -0.04694167852062592, "relative_score": -0.07764705882352946, "query_count": 1406}
+{"dataset": "ArguAna", "benchmark_family": "CS-MTEB", "language_pair": "zh-en", "retriever": "BM25", "setting": "degradation", "metric": "mrr", "score": -0.01644605203172711, "relative_score": -0.0864011938014795, "query_count": 1406}

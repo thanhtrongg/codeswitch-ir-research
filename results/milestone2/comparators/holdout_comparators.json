@@ -1,0 +1,58 @@
+{
+  "Arabzadeh": {
+    "reason": "No faithful existing implementation with registered features/objective was present at freeze.",
+    "status": "NOT_AVAILABLE"
+  },
+  "BGE-M3_reference_only": {
+    "code_switched": {
+      "mrr": 0.1517425694367573,
+      "ndcg@10": 0.10079198227113814,
+      "recall@10": 0.12666666666666665
+    },
+    "delta_cs": {
+      "mrr": 0.0024361623388359233,
+      "ndcg@10": 0.0030463351955313245,
+      "recall@10": 0.005666666666666639
+    },
+    "original": {
+      "mrr": 0.14930640709792137,
+      "ndcg@10": 0.09774564707560682,
+      "recall@10": 0.12100000000000001
+    }
+  },
+  "RRF": {
+    "code_switched": {
+      "mrr": 0.2776901386764613,
+      "ndcg@10": 0.1988274998624503,
+      "recall@10": 0.24241666666666667
+    },
+    "delta_cs": {
+      "mrr": -0.02396046398866164,
+      "ndcg@10": -0.032944450054992996,
+      "recall@10": -0.0635
+    },
+    "original": {
+      "mrr": 0.30165060266512295,
+      "ndcg@10": 0.2317719499174433,
+      "recall@10": 0.30591666666666667
+    }
+  },
+  "dataset": "ClimateFEVERHardNegatives",
+  "oracle_diagnostic_only": {
+    "code_switched": {
+      "mrr": 0.34642693041697215,
+      "ndcg@10": 0.24561470714178874,
+      "recall@10": 0.2796666666666667
+    },
+    "delta_cs": {
+      "mrr": -0.03649722647023984,
+      "ndcg@10": -0.026698215839173256,
+      "recall@10": -0.035666666666666624
+    },
+    "original": {
+      "mrr": 0.382924156887212,
+      "ndcg@10": 0.272312922980962,
+      "recall@10": 0.3153333333333333
+    }
+  }
+}

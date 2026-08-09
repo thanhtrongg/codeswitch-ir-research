@@ -1,0 +1,17 @@
+{
+  "scope": "development_only",
+  "datasets": [
+    "ArguAna",
+    "ClimateFEVERHardNegatives"
+  ],
+  "retrievers": [
+    "BM25",
+    "Qwen3-Embedding-0.6B",
+    "BGE-M3"
+  ],
+  "bootstrap_repetitions": 2000,
+  "negative_delta_means_degradation": true,
+  "structure_language_id": "Unicode-name heuristic: LATIN vs CJK/Hiragana/Katakana; punctuation/digits/other letters ignored",
+  "switch_ratio": "min(Latin letters, CJK letters) / known Latin+CJK letters",
+  "oracle_note": "oracle_cs_score is diagnostic only and is not a deployable fusion result"
+}

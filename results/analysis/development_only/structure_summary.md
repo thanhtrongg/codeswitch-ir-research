@@ -1,0 +1,26 @@
+| dataset | retriever | feature | query_count | pearson_with_delta_cs | mean_delta_cs |
+|---|---|---|---|---|---|
+| ArguAna | BGE_M3 | query_length_tokens | 1406 | -0.027675961344135677 | -0.006976369317320605 |
+| ArguAna | BGE_M3 | switch_ratio | 1406 | -0.005754742319950223 | -0.006976369317320605 |
+| ArguAna | BGE_M3 | language_entropy_bits | 1406 | 0.01324013811184661 | -0.006976369317320605 |
+| ArguAna | BGE_M3 | switch_count | 1406 | -0.016841159992511713 | -0.006976369317320605 |
+| ArguAna | BM25 | query_length_tokens | 1406 | 0.07692171031398581 | -0.024342773385892965 |
+| ArguAna | BM25 | switch_ratio | 1406 | -0.17317146711931558 | -0.024342773385892965 |
+| ArguAna | BM25 | language_entropy_bits | 1406 | -0.1704698963519667 | -0.024342773385892965 |
+| ArguAna | BM25 | switch_count | 1406 | 0.031561473480613236 | -0.024342773385892965 |
+| ArguAna | Qwen3_Embedding_0_6B | query_length_tokens | 1406 | -0.09025348936035293 | 0.00032942097253281993 |
+| ArguAna | Qwen3_Embedding_0_6B | switch_ratio | 1406 | -0.07468394801271909 | 0.00032942097253281993 |
+| ArguAna | Qwen3_Embedding_0_6B | language_entropy_bits | 1406 | -0.05785659881635486 | 0.00032942097253281993 |
+| ArguAna | Qwen3_Embedding_0_6B | switch_count | 1406 | -0.09317648509869976 | 0.00032942097253281993 |
+| ClimateFEVERHardNegatives | BGE_M3 | query_length_tokens | 1000 | 0.025229328636945398 | -0.00641841410950767 |
+| ClimateFEVERHardNegatives | BGE_M3 | switch_ratio | 1000 | -0.03569010684310031 | -0.00641841410950767 |
+| ClimateFEVERHardNegatives | BGE_M3 | language_entropy_bits | 1000 | -0.04558131115164443 | -0.00641841410950767 |
+| ClimateFEVERHardNegatives | BGE_M3 | switch_count | 1000 | -0.011776606337905317 | -0.00641841410950767 |
+| ClimateFEVERHardNegatives | BM25 | query_length_tokens | 1000 | 0.0008634897845110311 | -0.02928057485573143 |
+| ClimateFEVERHardNegatives | BM25 | switch_ratio | 1000 | -0.04245465056590936 | -0.02928057485573143 |
+| ClimateFEVERHardNegatives | BM25 | language_entropy_bits | 1000 | -0.06726653084262314 | -0.02928057485573143 |
+| ClimateFEVERHardNegatives | BM25 | switch_count | 1000 | -0.07582447744705725 | -0.02928057485573143 |
+| ClimateFEVERHardNegatives | Qwen3_Embedding_0_6B | query_length_tokens | 1000 | 0.1017317037278637 | -0.02966886633453238 |
+| ClimateFEVERHardNegatives | Qwen3_Embedding_0_6B | switch_ratio | 1000 | -0.1390858967213068 | -0.02966886633453238 |
+| ClimateFEVERHardNegatives | Qwen3_Embedding_0_6B | language_entropy_bits | 1000 | -0.14640234723423057 | -0.02966886633453238 |
+| ClimateFEVERHardNegatives | Qwen3_Embedding_0_6B | switch_count | 1000 | -0.030582627460515852 | -0.02966886633453238 |

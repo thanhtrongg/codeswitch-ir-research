@@ -1,0 +1,115 @@
+manifest_id: milestone_1_5c_milestone_2_freeze
+protocol_id: milestone_2_rq1_v1
+freeze_revision: milestone_1_5c
+supersedes: milestone_1_5b
+reason: semantic_protocol_clarification_before_execution
+freeze_status: complete
+readiness: READY_FOR_MILESTONE_2_IMPLEMENTATION
+execution_status: not_executed
+execution_authorized: false
+created_date: 2026-08-09
+
+frozen_decisions_unchanged:
+  research_question: >-
+    Pre-specified unlabeled QPP/retrieval-behavior signals predicting relative
+    BM25-versus-Qwen reliability under benchmark-provided zh-en code-switched
+    queries and ClimateFEVERHardNegatives_to_ArguAna transfer.
+  primary_source: ClimateFEVERHardNegatives
+  transfer_target: ArguAna
+  primary_transfer_direction: ClimateFEVERHardNegatives_to_ArguAna
+  reverse_transfer: NOT_REGISTERED
+  qwen_model: Qwen3-Embedding-0.6B
+  qwen_revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+  primary_baseline: Qwen
+  secondary_sparse_baseline: BM25
+  reference_only_dense_comparator: BGE-M3
+  active_signals:
+    - normalized_top1_minus_top2_score_margin
+    - top_k_score_dispersion
+  removed_signal: retrieved_set_embedding_coherence
+  selector_k: 10
+  epsilon: 1.0e-12
+  threshold_grid: [0.00, 0.05, 0.10, 0.15, 0.20]
+  rrf_baseline_only: true
+  rrf_k: 60
+  final_boundary: CSR-L_six_resources_zh_ja_untouched
+
+semantic_corrections:
+  candidate_specific_cdfs_before_signal_selection: true
+  cdf_fit_scope: Climate_source_fit_code_switched_zh_en_variants_only
+  signal_selection_scope: Climate_source_fit_code_switched_zh_en_variants_only
+  winner_label: >-
+    BM25 if per-query CS nDCG@10(BM25) > CS nDCG@10(Qwen), otherwise Qwen;
+    ties belong to Qwen.
+  candidate_selection_tau: 0.00
+  candidate_prediction: Qwen_if_G_candidate_gte_0_else_BM25
+  selection_objective: highest_mean_per_query_winner_classification_accuracy
+  tie_break: margin_before_dispersion
+  discard_unselected_signal_before_validation: true
+  selected_cdf_transfer: unchanged_source_fit_CDFs_only
+  target_recalibration: false
+  original_query_safety:
+    same_selected_signal: true
+    same_Climate_fit_CS_CDFs: true
+    same_validation_tau: true
+    cdf_recalibration: false
+    threshold_recalibration: false
+    original_outcomes_for_method_selection: false
+
+source_split:
+  path: results/protocol/milestone2_climate_source_split.json
+  seed: 20260809
+  unit: source_dataset::query_id
+  group_count: 1000
+  fit_groups: 600
+  validation_groups: 200
+  post_exploratory_frozen_holdout_groups: 200
+  variant_count: 2000
+  source_query_groups_sha256: 49d53e935f3e9e54c252d9aa130107f0bff1e5e678d39d8aa325916f307dab5b
+  assignment_sha256: fb1514ce76470601464f51ade05877fe33b5850b5d1087a1f4dc52ddd0fcdf9b
+  regenerated: false
+  modified: false
+
+leakage_validation:
+  raw_artifact_revalidation:
+    status: pass
+    source_qualified_development_final_overlap: 0
+    evidence:
+      - results/audit/dataset_overlap.json
+      - results/audit/source_query_overlap.csv
+  dataset_backed_validator:
+    status: inconclusive_timeout
+    timeout_seconds: 180
+    interpretation: >-
+      Operational metadata-resolution timeout only; not evidence of leakage or
+      validator failure, and it does not supersede the independent raw-artifact
+      PASS.
+
+frozen_files:
+  data_protocol:
+    path: configs/data_protocol.yaml
+    sha256: 856357D502434A2A12101FB476FF3F86B4A30E703810E6AA7D8EB8D8752954D8
+  protocol_config:
+    path: configs/milestone2_protocol.yaml
+    sha256: 39617DD0158D72D903298405169B06F12760C621B0691CD51CA3DFA0339D6BF0
+  preregistration:
+    path: docs/milestone2_preregistration.md
+    sha256: 0F33796BB3DF6933F7F6B0EB1BD29C964D7293E69B73A235998EF6B4F6D9C894
+  semantic_freeze_report:
+    path: docs/milestone1_5c_semantic_freeze_report.md
+    sha256: 044D17088CC29E325F0EF76F0977FCA4535DE01DDA81AB1FEA75AF14CD29F109
+  source_split:
+    path: results/protocol/milestone2_climate_source_split.json
+    sha256: FB93CC45AF551B51E33BDB4195FA7AB9295AB7375AB223A4AD996482C97F4577
+  semantic_validation_test:
+    path: tests/test_milestone2_semantic_freeze.py
+    sha256: 21078DE128F1BDDCDBCA878FD4F54078D03A52BECA983A8D572538951F3B074C
+  superseded_1_5b_manifest:
+    path: results/protocol/milestone2_freeze_manifest.yaml
+    sha256: 0CC81078F6C6CC5C7D7F1271DEFBA7DBFCD7139E839659A4868091EA0529E089
+
+execution_stop:
+  milestone2_experiment_executed: false
+  new_experimental_outcomes_used: false
+  human_approval_required: true
+  stop_after_1_5c: true

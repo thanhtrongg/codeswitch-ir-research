@@ -1,0 +1,57 @@
+protocol_revision: milestone_1_5d
+execution_started_utc: '2026-08-09T05:04:01.178708+00:00'
+protocol_verified: true
+baseline_artifacts_verified: true
+pre_holdout_tests_passed: true
+fit_completed: true
+signal_frozen: true
+validation_completed: true
+tau_frozen: true
+method_manifest_created: true
+climate_holdout_accessed: true
+climate_holdout_completed: true
+source_gate_status: FAIL
+arguana_accessed: false
+arguana_completed: false
+transfer_gate_status: NOT_AUTHORIZED_SOURCE_GATE_FAILED
+outputs_completed: true
+csr_l_accessed: false
+gpu_worker_launched: false
+failure: null
+timestamps:
+  protocol_verified: '2026-08-09T05:04:01.181701+00:00'
+  baseline_artifacts_verified: '2026-08-09T05:04:47.681730+00:00'
+  pre_holdout_tests_passed: '2026-08-09T05:04:48.462058+00:00'
+  fit_completed: '2026-08-09T05:04:51.537409+00:00'
+  signal_frozen: '2026-08-09T05:04:51.541464+00:00'
+  validation_completed: '2026-08-09T05:04:53.174247+00:00'
+  tau_frozen: '2026-08-09T05:04:53.177258+00:00'
+  method_manifest_created: '2026-08-09T05:04:53.368971+00:00'
+  climate_holdout_accessed: '2026-08-09T05:05:22.722674+00:00'
+  climate_holdout_completed: '2026-08-09T05:05:29.859693+00:00'
+  source_gate_status: '2026-08-09T05:05:29.864504+00:00'
+  transfer_gate_status: '2026-08-09T05:05:29.867501+00:00'
+  outputs_completed: '2026-08-09T05:05:36.512010+00:00'
+pre_holdout_test_record:
+  command:
+  - D:\Study\Research\Codeswitch\.venv\Scripts\python.exe
+  - -m
+  - pytest
+  - -q
+  - tests/test_milestone2.py
+  - tests/test_milestone2_semantic_freeze.py
+  returncode: 0
+  log_path: results/milestone2/logs/pre_holdout_tests.txt
+  log_sha256: 5B659FF4AEC67A30B01248B8729FE2D4D43BAFDF7E75345EBA783DAB5A173AC0
+  output: '.....................                                                    [100%]
+
+    21 passed in 0.24s'
+method_manifest_path: results/milestone2/freeze/milestone2_method_freeze_manifest.yaml
+method_manifest_sha256: CADC299EED07C5AE6DC37C926F7FCF8CCC4FEF72BAF9962010F1DC30CEC25D7F
+selected_signal: normalized_top1_minus_top2_score_margin
+selected_tau: 0.2
+execution_finished_utc: '2026-08-09T05:05:29.871012+00:00'
+runtime_seconds: 88.692304
+final_milestone2_status: MILESTONE 2 SOURCE GATE FAILED
+output_manifest_path: results/milestone2/logs/output_manifest.json
+output_file_count: 54

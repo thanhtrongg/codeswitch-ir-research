@@ -1,0 +1,10 @@
+\begin{tabular}{lllllllll}
+\toprule
+category & count & percentage\_of\_holdout & mean\_signed\_BM25\_minus\_Qwen\_ndcg\_at\_10 & total\_signed\_BM25\_minus\_Qwen\_ndcg\_at\_10 & mean\_gain\_or\_loss\_ndcg\_at\_10 & total\_gain\_or\_loss\_ndcg\_at\_10 & interpretation & diagnostic\_label \\
+\midrule
+beneficial\_BM25\_switches & 8 & 4.000000000 & 0.365432449 & 2.923459589 & 0.365432449 & 2.923459589 & BM25-minus-Qwen gain from a beneficial switch & POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA \\
+harmful\_BM25\_switches & 60 & 30.000000000 & -0.093928643 & -5.635718598 & 0.093928643 & 5.635718598 & Qwen-minus-BM25 loss from an incorrect BM25 switch & POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA \\
+correct\_Qwen\_keeps & 112 & 56.000000000 & -0.171115027 & -19.164882979 & 0.171115027 & 19.164882979 & Qwen-minus-BM25 advantage retained by the Qwen fallback & POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA \\
+missed\_BM25\_opportunities & 20 & 10.000000000 & 0.349186915 & 6.983738298 & 0.349186915 & 6.983738298 & BM25-minus-Qwen gain left unrealized by a missed opportunity & POST-HOC DIAGNOSTICS - NOT SELECTION CRITERIA \\
+\bottomrule
+\end{tabular}

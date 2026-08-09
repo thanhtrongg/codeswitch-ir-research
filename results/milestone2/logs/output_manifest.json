@@ -1,0 +1,270 @@
+{
+  "created_utc": "2026-08-09T05:10:08.226730+00:00",
+  "files": [
+    {
+      "bytes": 8881,
+      "path": "docs/milestone2_report.md",
+      "sha256": "2CDFAA18250EFAE4A469E8038A8510B6C603D01147DCD1143433D3A679E2A9BF"
+    },
+    {
+      "bytes": 347,
+      "path": "results/milestone2/bootstrap/holdout_code_switched_selector_minus_qwen.json",
+      "sha256": "B7E93840CAB267C2F632F969D757B98ABCE8DF010FBA71F07398A98158BD06F3"
+    },
+    {
+      "bytes": 345,
+      "path": "results/milestone2/bootstrap/holdout_original_selector_minus_qwen.json",
+      "sha256": "EA958FE9E37AEDC34A17A766F48653A89706DE34C98393605933BF7C94566CD9"
+    },
+    {
+      "bytes": 15088,
+      "path": "results/milestone2/calibration/bm25_fit_cdf.json",
+      "sha256": "EFC28B3921A77B49662FA69AE83692C629448934844DFDE2B6148A36A0C3A215"
+    },
+    {
+      "bytes": 172719,
+      "path": "results/milestone2/calibration/fit_signal_selection.csv",
+      "sha256": "46184476A07ECBC5CBC1E8BA76C12D20E6DCC6E6F1D68B9BF8B962888D7FEFEC"
+    },
+    {
+      "bytes": 552,
+      "path": "results/milestone2/calibration/fit_signal_selection_summary.json",
+      "sha256": "90350087186CB2990FBCCBB89B6FEC45F379BC4551579B5D9E61397142064E4D"
+    },
+    {
+      "bytes": 15146,
+      "path": "results/milestone2/calibration/qwen_fit_cdf.json",
+      "sha256": "C6AB93A2A6C03211A87F99BE7E0F0ED4D0802B76FA131804E42330925F2F82F0"
+    },
+    {
+      "bytes": 237,
+      "path": "results/milestone2/calibration/selected_signal.json",
+      "sha256": "1C251449EE3FC61541E1FE9CF1C30815926B77A91AC0CDCFB3872DD586A36AC2"
+    },
+    {
+      "bytes": 1520,
+      "path": "results/milestone2/comparators/holdout_comparators.json",
+      "sha256": "284AEB40FB58239A47A352D6319C88D50CD929817672842995DB88AC145AAB04"
+    },
+    {
+      "bytes": 2289,
+      "path": "results/milestone2/execution_ledger.yaml",
+      "sha256": "C2B0D842FDFAB80830F6BAF0194557ECC34660546111D1B3183F08CC24AE1EBB"
+    },
+    {
+      "bytes": 14768,
+      "path": "results/milestone2/figures/figure1_fit_signal_comparison.pdf",
+      "sha256": "1E85B666739DD799109B7B059C512976AB7E9099A0DF6CC2BCF7CFFD24FCEB18"
+    },
+    {
+      "bytes": 55093,
+      "path": "results/milestone2/figures/figure1_fit_signal_comparison.png",
+      "sha256": "6E392999F350685EEAA4B5505C7ECEB262E55CA06DA1B4F075BE74EAE1801FAF"
+    },
+    {
+      "bytes": 103,
+      "path": "results/milestone2/figures/figure1_fit_signal_comparison_plot_data.csv",
+      "sha256": "A9870B434D1CC867F93A810F9CCF3B816187D49EC19310C4E1D31789261D0BE5"
+    },
+    {
+      "bytes": 14989,
+      "path": "results/milestone2/figures/figure2_validation_tau_sweep.pdf",
+      "sha256": "8B23109D86C331503135FF81D28F0BC123A671962869C5BF50275DA934BA7D68"
+    },
+    {
+      "bytes": 87782,
+      "path": "results/milestone2/figures/figure2_validation_tau_sweep.png",
+      "sha256": "D9F16C3E8696B5B1A0D08671B79B3DEC893D406DC3FEDD74B029DEA25EDD90AF"
+    },
+    {
+      "bytes": 182,
+      "path": "results/milestone2/figures/figure2_validation_tau_sweep_plot_data.csv",
+      "sha256": "2A2A0E718D604F3B4D3C2B5C298D41711FDF4521579BAADA0F32305FC8C55800"
+    },
+    {
+      "bytes": 16294,
+      "path": "results/milestone2/figures/figure3_frozen_method_performance.pdf",
+      "sha256": "A1F89A5D1FDBF377EBA10EDB68584BBF2DD66385C3213D76CC792DDC608A6696"
+    },
+    {
+      "bytes": 75249,
+      "path": "results/milestone2/figures/figure3_frozen_method_performance.png",
+      "sha256": "C9E4C3AE9645CC9D7686249D8DF17F58616575AEDEB8C67F8B93AC7BB13994BD"
+    },
+    {
+      "bytes": 166,
+      "path": "results/milestone2/figures/figure3_frozen_method_performance_plot_data.csv",
+      "sha256": "404111437CC4F13118207F79694B7176B29B077DDD202097689B10F94CA02EC1"
+    },
+    {
+      "bytes": 14129,
+      "path": "results/milestone2/figures/figure4_relative_reliability_confusion.pdf",
+      "sha256": "8B43A80FE985D42650D6A043A06FADE7130FE017CC7A31F65505D79DAB228200"
+    },
+    {
+      "bytes": 54026,
+      "path": "results/milestone2/figures/figure4_relative_reliability_confusion.png",
+      "sha256": "9DBC9ACDA30DE720A47A98BC33D0490FC1A9EF95D3181A0FD9F14DB5C14545F6"
+    },
+    {
+      "bytes": 164,
+      "path": "results/milestone2/figures/figure4_relative_reliability_confusion_plot_data.csv",
+      "sha256": "EFA30F739604BB6702FFBDB8B0394EA27539F6875441911DB183FCB61444A8A3"
+    },
+    {
+      "bytes": 14381,
+      "path": "results/milestone2/figures/figure5_selector_routing.pdf",
+      "sha256": "B2D9AA12E3A4817B72AA9271D01163BD6F9E978936806E7A5C706F75C24C636C"
+    },
+    {
+      "bytes": 44960,
+      "path": "results/milestone2/figures/figure5_selector_routing.png",
+      "sha256": "BF6154652DCB17D7CC9F22372406656F58CD874E9E296AF66F423B01F677A3BE"
+    },
+    {
+      "bytes": 82,
+      "path": "results/milestone2/figures/figure5_selector_routing_plot_data.csv",
+      "sha256": "63807125B49D7A9089A9C125AA2600416A98E190B2D578F18EFA1374595DE6EC"
+    },
+    {
+      "bytes": 6340,
+      "path": "results/milestone2/freeze/milestone2_method_freeze_manifest.yaml",
+      "sha256": "CADC299EED07C5AE6DC37C926F7FCF8CCC4FEF72BAF9962010F1DC30CEC25D7F"
+    },
+    {
+      "bytes": 591,
+      "path": "results/milestone2/gates/climate_source_gate.json",
+      "sha256": "1D1C4278BC11AC5EFA160FE0B67EE1C1928A24C136C0D2024EDB8E0E021C07F2"
+    },
+    {
+      "bytes": 66,
+      "path": "results/milestone2/gates/final_status.json",
+      "sha256": "12C5F7D2C10BB5FB053BAC50E7637819EA2840D8122B44E21F06A9D613849806"
+    },
+    {
+      "bytes": 60628,
+      "path": "results/milestone2/holdout/code_switched_selector_diagnostics.csv",
+      "sha256": "F3D97EA44AE6EDFB6802DD1CF81DB4803BAFC6CF68ED3B3E511491685E304700"
+    },
+    {
+      "bytes": 7809,
+      "path": "results/milestone2/holdout/holdout_results.json",
+      "sha256": "63674FEFA39452F68866A9741FBB635F77A59DF1EF4897ADBAF919BD0E499E1D"
+    },
+    {
+      "bytes": 60199,
+      "path": "results/milestone2/holdout/original_selector_diagnostics.csv",
+      "sha256": "39951803C739F802BA3001735A9166BD081FDA03F03458C7BC29200BAC60CEFE"
+    },
+    {
+      "bytes": 446098,
+      "path": "results/milestone2/logs/baseline_artifact_manifest.json",
+      "sha256": "898F8AAFD20D8C049CDCE80D34615F771AE95537F8127D6FE63E1CCCDC1E3903"
+    },
+    {
+      "bytes": 1319,
+      "path": "results/milestone2/logs/final_validation.json",
+      "sha256": "252EF22BE620287D0274BA95E299930FF985F63861C4F839A1FAB55646736433"
+    },
+    {
+      "bytes": 99,
+      "path": "results/milestone2/logs/pre_holdout_tests.txt",
+      "sha256": "5B659FF4AEC67A30B01248B8729FE2D4D43BAFDF7E75345EBA783DAB5A173AC0"
+    },
+    {
+      "bytes": 22001,
+      "path": "results/milestone2/milestone2_summary.json",
+      "sha256": "6DF43D8461157802778348691E28F96187B9C3C3D98422C8FEC85893BD597E0E"
+    },
+    {
+      "bytes": 103,
+      "path": "results/milestone2/tables/table1_climate_fit_signal_selection.csv",
+      "sha256": "D3E5183AF4E5618E7E5EBE3B88D607D1E2A177C4432EC0327C19BA996F6E606D"
+    },
+    {
+      "bytes": 128,
+      "path": "results/milestone2/tables/table1_climate_fit_signal_selection.md",
+      "sha256": "635FE6C140D0BFB4762A64A7FB1B179A1E7AFB7EF0DEDFED956FBCEB10A7798A"
+    },
+    {
+      "bytes": 171,
+      "path": "results/milestone2/tables/table1_climate_fit_signal_selection.tex",
+      "sha256": "FE6B33FF95BCAE32C0114C4FA6547C445019D4A722CFC322B7BFE3DDB37E75E5"
+    },
+    {
+      "bytes": 272,
+      "path": "results/milestone2/tables/table2_climate_validation_tau_sweep.csv",
+      "sha256": "EAB7E73B1D11054E5FBFE11738E22949E220ACA6E29508CDC49127DD8AF0670E"
+    },
+    {
+      "bytes": 446,
+      "path": "results/milestone2/tables/table2_climate_validation_tau_sweep.md",
+      "sha256": "B4D689A778B26625E42EA5C7E4414B537139ECDB4046416E06D30B715148906E"
+    },
+    {
+      "bytes": 482,
+      "path": "results/milestone2/tables/table2_climate_validation_tau_sweep.tex",
+      "sha256": "8D302EB788DED4F005E1335F6818FE38CC61F1F02EDD3C58EC48761C68413C11"
+    },
+    {
+      "bytes": 1104,
+      "path": "results/milestone2/tables/table3_climate_holdout_primary_results.csv",
+      "sha256": "42D31B57DB44C4DFA22404A937AD64F98378AFFE7A1477999588D12702C986C4"
+    },
+    {
+      "bytes": 996,
+      "path": "results/milestone2/tables/table3_climate_holdout_primary_results.md",
+      "sha256": "E0D7825512556BD1D17CBB65E082454C6E258B09520D7C09E5A0A638DFECC59D"
+    },
+    {
+      "bytes": 1022,
+      "path": "results/milestone2/tables/table3_climate_holdout_primary_results.tex",
+      "sha256": "D8DD2795E67F9BC0C15356FB5539623F5389DAD885B11E508EFC0AA7BE2B33CE"
+    },
+    {
+      "bytes": 197,
+      "path": "results/milestone2/tables/table4_arguana_transfer_results.csv",
+      "sha256": "996CD9E88276DC1D727AB6C07F8DC79F5DBAE7DA244EB21C29727837780C4455"
+    },
+    {
+      "bytes": 305,
+      "path": "results/milestone2/tables/table4_arguana_transfer_results.md",
+      "sha256": "34F6C6E887B796093BDE6D1E275DB3E815C9B7C7FBB3351946126DCB6613546C"
+    },
+    {
+      "bytes": 336,
+      "path": "results/milestone2/tables/table4_arguana_transfer_results.tex",
+      "sha256": "B1A0EFE1B7766873F891C4D3E934D1DA2D66C43B77522DC9BD4239017AA61C6D"
+    },
+    {
+      "bytes": 291,
+      "path": "results/milestone2/tables/table5_gate_summary.csv",
+      "sha256": "37EBFCEACEE355287DA8230F17086E497830316F7C809E1D485302F3CF230CD2"
+    },
+    {
+      "bytes": 340,
+      "path": "results/milestone2/tables/table5_gate_summary.md",
+      "sha256": "059A39CC5FC6A2B4D733877A8AE83CBC19DBACC23CFE1DA55B266D5DA73FD65B"
+    },
+    {
+      "bytes": 372,
+      "path": "results/milestone2/tables/table5_gate_summary.tex",
+      "sha256": "06DE3804BFB7B44004F06CED38C82FEA05B6030093FE82FD3DBDECD68EA2559A"
+    },
+    {
+      "bytes": 52044,
+      "path": "results/milestone2/validation/selected_tau_diagnostics.csv",
+      "sha256": "8E8BD672D649C04DCC3F7CD332ED41CA8CFF0F251FA8AB385387636BEFC04F22"
+    },
+    {
+      "bytes": 1669,
+      "path": "results/milestone2/validation/tau_selection_summary.json",
+      "sha256": "D2C9FBCDB991844F952D748939E79231FBDA2AF83506A44D6DD04C5E46EF1421"
+    },
+    {
+      "bytes": 356,
+      "path": "results/milestone2/validation/tau_sweep.csv",
+      "sha256": "18A47D20E014BD0AE5CF7C0987A01FC82A09250F6E10AA37A897067FABAA11C9"
+    }
+  ]
+}

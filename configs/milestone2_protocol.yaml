@@ -1,0 +1,401 @@
+protocol_id: milestone_2_rq1_v1
+status: preregistered_not_executed
+freeze_revision: milestone_1_5d
+registration_date: 2026-08-09
+implementation_status: not_implemented_at_freeze
+execution_authorized: false
+
+purpose: >-
+  Test whether pre-specified unlabeled post-retrieval behavior signals can
+  predict relative reliability of fixed BM25 and fixed Qwen3-Embedding-0.6B on
+  benchmark-provided Chinese-English code-switched variants, and whether that
+  calibration transfers from ClimateFEVERHardNegatives to ArguAna. The CS-MTEB
+  development variants are reported by the benchmark audit as LLM-generated;
+  this protocol makes no claim about naturally occurring or human-authored
+  development queries.
+research_question: >-
+  On benchmark-provided zh-en code-switched variants, do pre-specified
+  unlabeled post-retrieval behavior signals predict which of fixed BM25 and
+  fixed Qwen will have higher per-query retrieval quality, and does a
+  ClimateFEVERHardNegatives calibration transfer unchanged to ArguAna without
+  score fusion, RRF, retriever training, structure-only routing, or adaptive
+  alpha?
+interpretation_boundary: >-
+  Milestone 1 analyzed all 2,406 available development query groups
+  exploratorily. The split below is therefore a post-exploratory procedurally
+  protected holdout, not a historically untouched or fully unseen estimate.
+  The six CSR-L resources remain the only truly untouched final boundary.
+
+scope:
+  languages_evaluated: [zh]
+  language_pair: zh-en
+  development:
+    primary_source:
+      id: UTokyo-Yokoya-Lab/ClimateFEVER_hardnegatives_CS-MTEB
+      short_name: ClimateFEVERHardNegatives
+      source_reason: >-
+        Milestone 1 showed the larger BM25/Qwen disagreement and oracle
+        headroom on ClimateFEVERHardNegatives; this resource is selected before
+        any Milestone 2 selector or threshold result is inspected.
+    fixed_transfer_target:
+      id: UTokyo-Yokoya-Lab/arguana_CS-MTEB
+      short_name: ArguAna
+      role: >-
+        Fixed target-transfer evaluation only. ArguAna outcomes may not affect
+        signal selection, CDF construction, threshold selection, tuning,
+        implementation changes, or exceptions in the primary direction.
+      reverse_direction: not_registered
+  final_resources:
+    - UTokyo-Yokoya-Lab/webis-touche2020-v3-CSR-L
+    - UTokyo-Yokoya-Lab/HumanEvalRetrieval-CSR-L
+    - UTokyo-Yokoya-Lab/trec-covid-CSR-L
+    - UTokyo-Yokoya-Lab/core17-instructions-mteb-CSR-L
+    - UTokyo-Yokoya-Lab/news21-instructions-mteb-CSR-L
+    - UTokyo-Yokoya-Lab/robust04-instructions-mteb-CSR-L
+  final_languages: [zh, ja]
+  source_identity: source_dataset::query_id
+  corpus_reduction: false
+  final_test_access_before_freeze: false
+  final_test_runs: exactly_once_per_registered_resource_and_language
+
+data_boundary:
+  development_variants:
+    authoring: benchmark-provided; LLM-generated according to the benchmark audit
+    human_authored_natural_evidence: not_claimed
+  csr_l_variants:
+    authoring: benchmark-specific human-authored/human-validated boundary where declared by the audit
+    role: truly_untouched_final_test_boundary
+  historical_milestone1_use:
+    query_groups_analyzed: 2406
+    status: exploratory_all_development_groups
+    consequence: >-
+      The registered holdout is protected procedurally after exploration; it
+      must not be described as historically unseen.
+  leakage_identity:
+    grouping_key: source_dataset::query_id
+    variants_stay_together: true
+    qrels_and_corpus_artifacts_stay_with_group: true
+
+leakage_validation:
+  raw_artifact_revalidation:
+    status: pass
+    source_qualified_development_final_overlap: 0
+    evidence:
+      - results/audit/dataset_overlap.json
+      - results/audit/source_query_overlap.csv
+    interpretation: >-
+      Independent raw-artifact revalidation found zero source-qualified
+      development/final intersections under the registered provenance and
+      grouping policy.
+  dataset_backed_validator:
+    status: inconclusive_timeout
+    timeout_seconds: 180
+    interpretation: >-
+      Operational metadata-resolution timeout only. It does not indicate
+      leakage, does not indicate validator failure, and does not supersede the
+      independent raw-artifact PASS.
+
+retrievers:
+  sparse:
+    id: BM25
+    status: fixed_secondary_baseline
+  dense:
+    id: Qwen3-Embedding-0.6B
+    model_id: Qwen/Qwen3-Embedding-0.6B
+    revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+    status: fixed_primary_baseline
+  reference_only:
+    - BGE-M3
+  training: prohibited
+
+development_splits:
+  primary_source:
+    unit: source_dataset::query_id
+    method: pre_materialized_sha256_group_order
+    seed: 20260809
+    assignment_algorithm: >-
+      Sort the exact source_query_id strings by the hexadecimal SHA-256 digest
+      of f'{seed}|{source_query_id}', then assign contiguous blocks in that
+      order: first 60% fit, next 20% validation, final 20% post-exploratory
+      frozen holdout.
+    fit_fraction: 0.60
+    validation_fraction: 0.20
+    post_exploratory_frozen_holdout_fraction: 0.20
+    group_count: 1000
+    variant_count: 2000
+    assignment_manifest: results/protocol/milestone2_climate_source_split.json
+    source_query_groups_sha256: 49d53e935f3e9e54c252d9aa130107f0bff1e5e678d39d8aa325916f307dab5b
+    assignment_sha256: fb1514ce76470601464f51ade05877fe33b5850b5d1087a1f4dc52ddd0fcdf9b
+    assignment_manifest_sha256: FB93CC45AF551B51E33BDB4195FA7AB9295AB7375AB223A4AD996482C97F4577
+    rewritten_variants_must_stay_together: true
+    calibration_variant_scope: code_switched_zh_en_only
+    original_variants_in_calibration_or_signal_selection: false
+    recompute_before_execution: false
+    outcome_free: true
+  fixed_transfer_target:
+    unit: source_dataset::query_id
+    split: no_target_selection_split
+    role: evaluate_after_source_method_freeze_unchanged
+    target_outcomes_allowed_for_selection: false
+    target_cdf_recalibration: false
+    target_threshold_tuning: false
+    original_query_role: safety_reporting_only_with_source_CS_calibration
+
+development_order_and_roles:
+  source_fit:
+    allowed: signal-family selection and source-fit empirical CDF construction
+    qrels_or_outcomes: allowed_for_registered_winner_labels_only
+  source_validation:
+    allowed: single threshold selection from the fixed grid only
+  source_holdout:
+    allowed: post-freeze confirmatory reporting only
+  target_arguana:
+    allowed: unchanged transfer reporting only
+  final_csr_l:
+    allowed: only after source gate, transfer gate, artifact review, and human approval
+
+inference_configuration:
+  qwen_existing_development_artifacts:
+    effective_max_sequence_length: 512
+    tokenizer_truncation: true
+    padding_strategy: longest_in_batch_dynamic_padding
+    inference_dtype: torch.float16
+    pooling: mean_masked_last_hidden_state
+    normalization: true
+    source_climate_batch_size: 32
+    target_arguana_batch_size: 16
+    source_run_config: results/runs/ClimateFEVERHardNegatives/zh/Qwen3-Embedding-0.6B/run_config.json
+    target_run_config: results/runs/ArguAna/zh/Qwen3-Embedding-0.6B/run_config.json
+    note: >-
+      These are the completed fixed-baseline artifact configurations. The
+      selector consumes their existing rankings; this freeze does not authorize
+      re-encoding or a batch-size change.
+  selector_top_k: 10
+  epsilon: 1.0e-12
+
+candidate_method:
+  id: unlabeled_relative_qpp_hard_selector_v1
+  count: 1
+  output: choose_one_retriever_per_query
+  active_signal_count: 2
+  no_fusion: true
+  no_rrf_in_candidate: true
+  no_new_model_training: true
+  no_structure_features: true
+  no_cmi_or_switch_ratio: true
+  no_query_expansion: true
+  no_llm_judging: true
+  signal_families:
+    - id: normalized_top1_minus_top2_score_margin
+      status: active
+      definition: >-
+        For retriever r and its top-k scores s_r,1 >= ... >= s_r,k,
+        M_r(q)=(s_r,1-s_r,2)/(abs(s_r,1-s_r,k)+epsilon). If the denominator is
+        <= epsilon, set M_r(q)=0.
+      higher_value_means: registered_confidence
+    - id: top_k_score_dispersion
+      status: active
+      definition: >-
+        Let z_r,i=(s_r,i-s_r,k)/(s_r,1-s_r,k+epsilon). If the score range is
+        <= epsilon, set every z_r,i to zero. Otherwise D_r(q) is the population
+        standard deviation of z_r,1,...,z_r,k with ddof=0.
+      higher_value_means: registered_confidence
+    - id: retrieved_set_embedding_coherence
+      status: removed_before_milestone2_execution
+      definition: >-
+        Would have been C_r(q)=2/(k(k-1))*sum_{i<j} cosine(e(d_i),e(d_j)) in
+        the fixed normalized Qwen document-embedding space for both retrievers.
+      removal_reason: >-
+        No validated Qwen Climate corpus embedding cache exists. The existing
+        cache is BGE-M3 only, while the Qwen development run recorded
+        cache_path null and embeddings_persisted false.
+      decision: >-
+        Remove before candidate selection. No new Qwen corpus encoding is
+        authorized by this freeze, and the removed signal may not be reinstated
+        by inspecting outcomes or by a post-hoc cache generation.
+  signal_selection:
+    candidate_families: [normalized_top1_minus_top2_score_margin, top_k_score_dispersion]
+    data: primary_source_fit_code_switched_variants_only
+    candidates_evaluated_independently: true
+    candidate_specific_cdf_procedure:
+      raw_signal_scope: each_candidate_signal_separately_for_BM25_and_Qwen
+      cdf_scope: Climate_source_fit_code_switched_zh_en_variants_only
+      percentile_definition: P_candidate_r(q)=F_candidate_r(S_candidate_r(q))
+      difference_definition: G_candidate(q)=P_candidate_Qwen(q)-P_candidate_BM25(q)
+      tau_for_signal_comparison: 0.00
+      prediction_rule: Qwen_if_G_candidate_gte_0_else_BM25
+      observed_label: >-
+        BM25 if per-query code-switched nDCG@10(BM25) is strictly greater than
+        nDCG@10(Qwen); otherwise Qwen, including ties.
+      label_outcomes_scope: Climate_source_fit_code_switched_variants_only
+      label_available_at_inference: false
+    selection_metric: mean_per_query_winner_classification_accuracy
+    tie_order: [normalized_top1_minus_top2_score_margin, top_k_score_dispersion]
+    after_selection:
+      discard_unselected_signal: true
+      retain_only_selected_signal_definition_and_candidate_CDFs: true
+      validation_holdout_and_transfer_use_selected_signal_only: true
+    validation_or_target_signal_selection: false
+    signal_combination_or_averaging: false
+    target_outcomes_used: false
+    holdout_outcomes_used: false
+    target_oracle_used: false
+
+  cross_retriever_normalization:
+    applied_to: each_candidate_during_source_fit_signal_selection
+    candidate_specific: true
+    fit_empirical_cdf: >-
+      For each candidate c and retriever r, F_c,r(x)=(1/N_fit)*sum over
+      Climate source-fit code-switched groups of indicator(S_c,r(q)<=x),
+      including ties. Construct each candidate CDF from its raw CS-fit signal
+      values before comparing candidate families.
+    normalized_signal: P_c,r(q)=F_c,r(S_c,r(q))
+    difference: G_c(q)=P_c,Qwen(q)-P_c,BM25(q)
+    target_recalibration: false
+    target_cdf_refitting: false
+    transfer: >-
+      After signal-family selection, discard the unselected candidate and freeze
+      only the selected signal definition plus its BM25/Qwen source-fit CS CDFs.
+      Apply those unchanged to Climate validation, Climate holdout, ArguAna,
+      and original-query safety reporting. No target or original-query CDF
+      refitting is permitted.
+  hard_selection_rule:
+    if_abs_G_le_tau: Qwen
+    if_G_gt_tau: Qwen
+    if_G_lt_negative_tau: BM25
+    equivalent_bm25_condition: G < -tau
+    equivalent_qwen_condition: G >= -tau
+    ties: Qwen
+    fusion_or_exceptions: prohibited
+  threshold_selection:
+    data: primary_source_validation_code_switched_variants_only
+    grid: [0.00, 0.05, 0.10, 0.15, 0.20]
+    objective: highest_code_switched_nDCG_at_10
+    tie_breaks:
+      - smaller_tau
+      - lexical_serialization_order
+    continuous_optimization: false
+    grid_expansion: false
+    target_influence: false
+    original_query_outcomes_for_threshold_selection: false
+    Delta_CS_for_threshold_selection: false
+    original_query_cdf_recalibration: false
+
+registered_comparators:
+  BM25_only:
+    status: fixed_secondary_baseline
+  Qwen_only:
+    status: fixed_primary_baseline
+  BGE-M3_reference_only:
+    status: reference_only
+  fixed_RRF_BM25_Qwen:
+    status: baseline_only
+    candidate_pool: union_of_BM25_and_Qwen_rankings
+    candidate_depth: 1000
+    rank_origin: 1_based
+    rrf_parameter_k: 60
+    formula: RRF_score(d)=sum_r 1/(60+rank_r(d)); missing ranks contribute zero
+    tuning: prohibited
+  Arabzadeh_strategy_selector:
+    status: NOT_AVAILABLE_UNLESS_FAITHFULLY_REPRODUCIBLE
+    role: reference_only_not_a_candidate
+    paper: >-
+      Arabzadeh, Yan, and Clarke, Predicting Efficiency/Effectiveness Trade-offs
+      for Dense vs. Sparse Retrieval Strategy Selection, CIKM 2021,
+      https://doi.org/10.1145/3459637.3482159
+    exact_features_objective_deviations: not_frozen_because_no_faithful_implementation_identified
+    prohibition: >-
+      Do not implement or report an Arabzadeh-like substitute. If faithful
+      reproduction is not available before execution, report NOT AVAILABLE.
+  observed_per_query_oracle_upper_bound:
+    status: diagnostic_only
+    tuning: prohibited
+
+metrics_and_decision:
+  primary_metric: official_nDCG@10
+  primary_condition: benchmark_provided_code_switched_zh_en
+  secondary_metrics:
+    - official_nDCG@10_original_query
+    - Delta_CS=nDCG@10(code_switched)-nDCG@10(original)
+    - recall@10
+    - MRR
+    - paired_per_query_winner_accuracy_against_observed_winner
+  uncertainty:
+    method: paired_per_query_bootstrap
+    replicates: 2000
+    confidence_level: 0.95
+    seed: 20260809
+    resampling_unit: complete_source_query_group
+    lower_bound: percentile_2_5_of_selector_minus_Qwen_replicates
+  source_gate:
+    required: >-
+      On the Climate post-exploratory frozen holdout, selector minus fixed Qwen
+      code-switched nDCG@10 must have a paired-bootstrap 95% lower bound > 0.
+    comparison_baseline: Qwen_only
+  transfer_gate:
+    required: >-
+      After the source method is frozen, unchanged application to ArguAna must
+      have a selector minus fixed Qwen code-switched nDCG@10 point estimate >= 0.
+    failed_transfer: positive_source_gate_and_failed_target_gate
+  original_query_safety:
+    required: >-
+      Report source holdout and target-transfer paired CIs for selector minus
+      Qwen original-query nDCG@10; no negative 95% lower bound is allowed under
+      the frozen safety rule.
+    calibration_source: Climate_source_fit_code_switched_variants_only
+    signal_family: selected_on_Climate_source_fit_code_switched_variants_only
+    cdf_recalibration: false
+    threshold_recalibration: false
+    relevance_outcomes_used_for_method_selection: false
+  failure_rule: >-
+    A failed source or transfer gate is reported as a null/negative calibration
+    or transfer result. Do not retune, add a selector, change tau, reduce the
+    corpus, use final results for selection, or claim mitigation.
+
+dense_encoding_policy:
+  no_new_dense_encoding_before_milestone2_execution: true
+  development_new_encoding: prohibited_by_this_freeze
+  final_encoding: >-
+    Allowed only after the development source/transfer gate is evaluated, the
+    implementation/configuration/dependency checksums are frozen, and a human
+      approves. No final encoding is performed in this semantic freeze.
+  active_run_policy: do_not_stop_restart_duplicate_or_interfere
+
+audit_revalidation:
+  raw_artifact_revalidation_status: pass
+  dataset_backed_validator_status: inconclusive_timeout
+  dataset_backed_validator:
+    timeout_seconds: 180
+    observed_stage: cached_HuggingFace_dataset_metadata_resolution
+    retrieval_or_gpu_launched: false
+    interpretation: >-
+      Operational metadata-resolution timeout only. It does not supersede the
+      independent raw-artifact PASS. See leakage_validation above.
+
+execution_order:
+  - verify_protocol_data_and_split_checksums
+  - verify_existing_BM25_and_Qwen_baseline_artifacts_and_configs
+  - compute_candidate_raw_signals_on_Climate_fit_code_switched_variants
+  - construct_candidate_specific_BM25_and_Qwen_CDFs_on_Climate_fit_code_switched_variants
+  - select_one_signal_using_Climate_fit_code_switched_winner_labels
+  - discard_unselected_signal_and_freeze_selected_signal_and_its_source_fit_CDFs
+  - select_tau_on_Climate_validation_code_switched_variants_only
+  - freeze_method_implementation_dependencies_and_checksums
+  - evaluate_once_on_Climate_post_exploratory_frozen_holdout_code_switched_variants
+  - human_review_source_holdout_artifacts
+  - apply_identical_selected_signal_CDFs_tau_and_implementation_to_ArguAna_transfer_target
+  - apply_identical_CS_calibration_to_original_query_safety_reporting_without_recalibration
+  - report_source_and_transfer_results_without_reselection
+  - only_if_registered_gates_pass_and_human_approves_execute_CSR_L_once
+
+stop_rules:
+  do_not_execute_if:
+    - source-query overlap or unexpected final artifact is found
+    - split manifest or protocol checksum differs
+    - retriever revision or registered input configuration differs
+    - required baseline artifact is missing or altered
+    - active signal definition, CDF rule, threshold grid, or RRF formula differs
+  after_any_gate_failure: >-
+    Stop. Do not rerun, retune, reverse the transfer direction, change the
+    threshold, reduce the corpus, inspect final results for selection, or add a
+    mitigation.

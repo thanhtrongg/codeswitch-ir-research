@@ -1,0 +1,136 @@
+{
+  "created_utc": "2026-08-09T05:43:09.636383+00:00",
+  "files": [
+    {
+      "bytes": 16758,
+      "path": "results/milestone2_5/figures/figure1_holdout_confusion.pdf",
+      "sha256": "C51A85FCED82F31F1BAB615987EC0C2E56DC63D2F16C4888F2B877E89F75035F"
+    },
+    {
+      "bytes": 63667,
+      "path": "results/milestone2_5/figures/figure1_holdout_confusion.png",
+      "sha256": "D594555607EF9B12899EC9FF88CD3E5C64C72A73E62691E850B3A0F6364A6DE9"
+    },
+    {
+      "bytes": 324,
+      "path": "results/milestone2_5/figures/figure1_holdout_confusion_plot_data.csv",
+      "sha256": "9A3A5EDBD291F5C61960523070C1714464A0A35AD085583FCB7E72A7CC45A64F"
+    },
+    {
+      "bytes": 21129,
+      "path": "results/milestone2_5/figures/figure2_G_vs_actual_gain.pdf",
+      "sha256": "45CB1061B449E3A1B5E924066FC94C449C3C182ADAF1A25DDAAD70793682086D"
+    },
+    {
+      "bytes": 209534,
+      "path": "results/milestone2_5/figures/figure2_G_vs_actual_gain.png",
+      "sha256": "3939A01E82796A554DDEF07426D910B4C91F968F2DF6C5546D27F2EBB0673CD7"
+    },
+    {
+      "bytes": 27389,
+      "path": "results/milestone2_5/figures/figure2_G_vs_actual_gain_plot_data.csv",
+      "sha256": "E4A00F74586119B48002E37EEAC1E177314ABA825F0945E1BF82F8C4F5E3D9FE"
+    },
+    {
+      "bytes": 19890,
+      "path": "results/milestone2_5/figures/figure3_G_distributions.pdf",
+      "sha256": "6AFD3E695FB14A972DE49925C980B14995AF2FEBE362A75B68FC52AF155DC653"
+    },
+    {
+      "bytes": 68212,
+      "path": "results/milestone2_5/figures/figure3_G_distributions.png",
+      "sha256": "C9DE234E1EE8A1D8169D4D93DC8DEF5EE370FF3AFF91290F57E44996524CB3B8"
+    },
+    {
+      "bytes": 125858,
+      "path": "results/milestone2_5/figures/figure3_G_distributions_plot_data.csv",
+      "sha256": "4CC8ADFE867125058FB75F901D38B013EAA341B0E603AE844AFC27D23D4ABDE0"
+    },
+    {
+      "bytes": 17383,
+      "path": "results/milestone2_5/figures/figure4_opportunity_capture.pdf",
+      "sha256": "1DFBD79736A2A4511670A42A5D1393DDFCA162752AD6EB4C16B5DE8ED5380BBD"
+    },
+    {
+      "bytes": 82419,
+      "path": "results/milestone2_5/figures/figure4_opportunity_capture.png",
+      "sha256": "986EDCA88877AFCD990DC53F17A87E51CE19DF016F9EBD41B206DBE0C1FEA720"
+    },
+    {
+      "bytes": 354,
+      "path": "results/milestone2_5/figures/figure4_opportunity_capture_plot_data.csv",
+      "sha256": "B7314F8D38CCC9C68F55293881ABB6510F5F4C2A6FE03585B63164C3B289D9EE"
+    },
+    {
+      "bytes": 431,
+      "path": "results/milestone2_5/logs/postmortem_validation.json",
+      "sha256": "8E33F0A5C75D8E27AD90372F6AE071C4CE849524A316BDC283B1B27F02F4A668"
+    },
+    {
+      "bytes": 60099,
+      "path": "results/milestone2_5/milestone2_5_summary.json",
+      "sha256": "745F0334941559AA1788F778827E3EB405C9B9A67DF2E7BB462088DB636B320D"
+    },
+    {
+      "bytes": 755,
+      "path": "results/milestone2_5/tables/table_A_qpp_signal_diagnostic_quality.csv",
+      "sha256": "6B0B77AB0E19AB32B1135177EEA58B6844015BE676D1BD2D95CB73B0C0F79974"
+    },
+    {
+      "bytes": 777,
+      "path": "results/milestone2_5/tables/table_A_qpp_signal_diagnostic_quality.md",
+      "sha256": "AABDEA0D1B1E93CEDC166DBF28EF6BADE90FFA772D468DF1364C14825A7453E6"
+    },
+    {
+      "bytes": 785,
+      "path": "results/milestone2_5/tables/table_A_qpp_signal_diagnostic_quality.tex",
+      "sha256": "1E13CF4C9CA8EA1675F24CA2E67D75801D334AC055580494A0B6867535D31246"
+    },
+    {
+      "bytes": 1039,
+      "path": "results/milestone2_5/tables/table_B_holdout_switching_decomposition.csv",
+      "sha256": "581E461ABC74FE0EC837F20A89FBD287EC9B07F1F5B1718AD25D12A3EB84D05E"
+    },
+    {
+      "bytes": 1114,
+      "path": "results/milestone2_5/tables/table_B_holdout_switching_decomposition.md",
+      "sha256": "63F6955160D74AFE102D293FDE5851B3F17DCF42B2164FE4577CCCB594243A3B"
+    },
+    {
+      "bytes": 1161,
+      "path": "results/milestone2_5/tables/table_B_holdout_switching_decomposition.tex",
+      "sha256": "35A8E9668609CB76456ADADBD73F4361BA0B40CCC14F3A528101097807C78C9D"
+    },
+    {
+      "bytes": 2063,
+      "path": "results/milestone2_5/tables/table_C_failure_mode_evidence_matrix.csv",
+      "sha256": "CA6F69FE99A5C03737C254870F437951813B63B781EAFEA9C92741D83EFEAE58"
+    },
+    {
+      "bytes": 2147,
+      "path": "results/milestone2_5/tables/table_C_failure_mode_evidence_matrix.md",
+      "sha256": "D934C3BA438296811D70197853B9AA3844A919C14FE66A6BE334175C953709A6"
+    },
+    {
+      "bytes": 2182,
+      "path": "results/milestone2_5/tables/table_C_failure_mode_evidence_matrix.tex",
+      "sha256": "9499D21A104D363C2ED79339D6291F16FE669A7ADA6B5713A980E575A40B1BF5"
+    },
+    {
+      "bytes": 1372,
+      "path": "results/milestone2_5/tables/table_D_publication_viability_assessment.csv",
+      "sha256": "9DB93896FBB06F377C1091F46FC2A640E45E2F8B199C5F7C37B2CDCFAABA9C0A"
+    },
+    {
+      "bytes": 1454,
+      "path": "results/milestone2_5/tables/table_D_publication_viability_assessment.md",
+      "sha256": "D232C10E85A09764D81970EEFD4D1D08DA8395025D81E8486415AA074D7C47BB"
+    },
+    {
+      "bytes": 1486,
+      "path": "results/milestone2_5/tables/table_D_publication_viability_assessment.tex",
+      "sha256": "B741EB870D3C3634F8842ACFFF87F069A9E396C248894F093869B6CE7E9BEC6E"
+    }
+  ],
+  "scope": "Milestone 2.5 postmortem outputs; manifest excludes itself"
+}

@@ -1,0 +1,13 @@
+{
+  "overall_source_gate_pass": false,
+  "source_cs_ci_lower": -0.032543918000253934,
+  "source_cs_ci_upper": 0.0048113375672271955,
+  "source_cs_difference_selector_minus_qwen": -0.01356129504520883,
+  "source_cs_gate_pass": false,
+  "source_cs_gate_rule": "95% paired-bootstrap lower bound > 0",
+  "source_original_ci_lower": -0.04019346117907389,
+  "source_original_ci_upper": 0.010080239893545945,
+  "source_original_difference_selector_minus_qwen": -0.01487788451846475,
+  "source_original_safety_pass": false,
+  "source_original_safety_rule": "95% paired-bootstrap lower bound >= 0"
+}

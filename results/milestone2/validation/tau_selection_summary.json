@@ -1,0 +1,66 @@
+{
+  "original_query_outcomes_used": false,
+  "sample_count": 200,
+  "scope": "ClimateFEVERHardNegatives validation code-switched zh-en variants only",
+  "selected_signal": "normalized_top1_minus_top2_score_margin",
+  "selected_tau": 0.2,
+  "selection_objective": "highest code-switched nDCG@10",
+  "sweep": [
+    {
+      "bm25_choice_count": 99,
+      "bm25_choice_rate": 0.495,
+      "code_switched_ndcg_at_10": 0.1437569694600204,
+      "qwen_choice_count": 101,
+      "qwen_choice_rate": 0.505,
+      "selected": false,
+      "tau": 0.0
+    },
+    {
+      "bm25_choice_count": 92,
+      "bm25_choice_rate": 0.46,
+      "code_switched_ndcg_at_10": 0.1469090035518398,
+      "qwen_choice_count": 108,
+      "qwen_choice_rate": 0.54,
+      "selected": false,
+      "tau": 0.05
+    },
+    {
+      "bm25_choice_count": 83,
+      "bm25_choice_rate": 0.415,
+      "code_switched_ndcg_at_10": 0.14976749050142463,
+      "qwen_choice_count": 117,
+      "qwen_choice_rate": 0.585,
+      "selected": false,
+      "tau": 0.1
+    },
+    {
+      "bm25_choice_count": 67,
+      "bm25_choice_rate": 0.335,
+      "code_switched_ndcg_at_10": 0.15033402075942073,
+      "qwen_choice_count": 133,
+      "qwen_choice_rate": 0.665,
+      "selected": false,
+      "tau": 0.15
+    },
+    {
+      "bm25_choice_count": 59,
+      "bm25_choice_rate": 0.295,
+      "code_switched_ndcg_at_10": 0.15196803668413628,
+      "qwen_choice_count": 141,
+      "qwen_choice_rate": 0.705,
+      "selected": true,
+      "tau": 0.2
+    }
+  ],
+  "threshold_grid": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "tie_breaks": [
+    "smaller tau",
+    "deterministic lexical serialization order"
+  ]
+}

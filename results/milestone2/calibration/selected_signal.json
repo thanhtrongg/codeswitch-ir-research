@@ -1,0 +1,8 @@
+{
+  "epsilon": 1e-12,
+  "fit_sample_count": 600,
+  "formula_identifier": "normalized_top1_minus_top2_score_margin",
+  "k": 10,
+  "selected_signal": "normalized_top1_minus_top2_score_margin",
+  "unselected_signal_used_after_fit": false
+}

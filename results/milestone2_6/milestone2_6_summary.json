@@ -1,0 +1,59 @@
+{
+  "milestone": "2.6",
+  "review_type": "fresh literature review and novelty audit only",
+  "review_date": "2026-08-09",
+  "fresh_review_complete": true,
+  "papers_reviewed_total": 36,
+  "papers_deeply_reviewed": 30,
+  "peer_reviewed_primary_works": 29,
+  "workshop_proceedings": 5,
+  "preprints_or_non_peer_reviewed_records": 2,
+  "primary_source_families": [
+    "code-switched and code-mixed information retrieval",
+    "sparse-dense hybrid retrieval and query-wise weighting",
+    "retriever selection and routing",
+    "query performance prediction",
+    "selective prediction and abstention",
+    "risk-aware RAG and source reliability",
+    "cross-domain calibration and generalization"
+  ],
+  "hypothesis_decisions": {
+    "H1_asymmetric_selective_risk_abstention": "REJECT — crowded/high risk",
+    "H2_retriever_disagreement_coverage": "REJECT — strongly threatened",
+    "H3_multi_source_calibration_invariance": "REJECT — no mechanism-level gap",
+    "H4": "NOT PROPOSED — structure-based variant is crowded"
+  },
+  "selected_hypothesis": null,
+  "novelty_boundary": "The only residual distinction is a future evaluation of whether existing unlabeled signals transfer to relative fixed BM25-versus-dense reliability under benchmark-provided code-switched variants and source-query-safe domain transfer; this is not a new method.",
+  "data_boundary": {
+    "climatefever_status": "consumed historically; no new access",
+    "arguana_status": "historically known target; outcomes not accessed during this audit",
+    "csr_l_status": "untouched final boundary",
+    "fresh_data_opened": false
+  },
+  "no_new_experiment": true,
+  "no_retuning": true,
+  "retrieval_or_encoding_run_launched": false,
+  "protected_data_access": false,
+  "milestone3_authorized": false,
+  "milestone3_preregistration_status": "NOT CREATED — no hypothesis survived the novelty audit",
+  "final_decision": "NO-GO — NO DEFENSIBLE NEW HYPOTHESIS FOUND",
+  "required_documents": [
+    "docs/milestone2_6_fresh_novelty_audit.md",
+    "docs/milestone2_6_hypothesis_decision.md",
+    "docs/milestone2_6_claim_prior_work_matrix.md",
+    "docs/milestone2_6_data_boundary_plan.md",
+    "docs/milestone2_6_reviewer_attack.md",
+    "docs/milestone2_6_bibliography.md",
+    "results/milestone2_6/literature/prior_work.csv",
+    "results/milestone2_6/literature/search_log.md"
+  ],
+  "execution_confirmations": {
+    "NO NEW EXPERIMENT.": true,
+    "NO RETUNING.": true,
+    "CLIMATE HOLDOUT REMAINS CONSUMED.": true,
+    "ARGUANA OUTCOMES UNTOUCHED.": true,
+    "FINAL CSR-L TEST UNTOUCHED.": true,
+    "MILESTONE 3 NOT EXECUTED.": true
+  }
+}

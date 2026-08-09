@@ -1,0 +1,18 @@
+{
+  "resource_id": "UTokyo-Yokoya-Lab/ClimateFEVER_hardnegatives_CS-MTEB",
+  "resource_revision": "742d2689e13422963b6e15a36362ac5315167974",
+  "language": "zh",
+  "retriever": "BM25",
+  "corpus_size": 47416,
+  "query_pairs": 1000,
+  "query_rows": 2000,
+  "retrieval_depth": 1000,
+  "embeddings_cached": false,
+  "embeddings_persisted": false,
+  "started_unix": 1786216444.8762374,
+  "runtime_seconds": 62.49038730000029,
+  "python": "3.11.0",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "memory_available_bytes": 1965506560
+}

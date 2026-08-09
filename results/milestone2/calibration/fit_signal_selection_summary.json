@@ -1,0 +1,15 @@
+{
+  "candidate_signals": [
+    "normalized_top1_minus_top2_score_margin",
+    "top_k_score_dispersion"
+  ],
+  "fit_accuracy_dispersion": 0.49166666666666664,
+  "fit_accuracy_margin": 0.5216666666666666,
+  "sample_count": 600,
+  "scope": "ClimateFEVERHardNegatives source fit code-switched zh-en variants only",
+  "selected_signal": "normalized_top1_minus_top2_score_margin",
+  "selection_rule": "highest mean winner accuracy; ties select margin",
+  "tie_break_applied": false,
+  "unselected_signal_discarded_after_fit": true,
+  "winner_ties": "Qwen"
+}

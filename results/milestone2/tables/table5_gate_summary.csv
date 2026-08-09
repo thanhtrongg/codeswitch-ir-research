@@ -1,0 +1,5 @@
+gate,difference,ci_lower,ci_upper,pass
+Climate CS selector-Qwen,-0.01356129504520883,-0.032543918000253934,0.0048113375672271955,False
+Climate original safety,-0.01487788451846475,-0.04019346117907389,0.010080239893545945,False
+ArguAna CS point estimate,,,,
+ArguAna original safety,,,,

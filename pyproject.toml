@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codeswitch-ir-baselines"
+version = "0.1.0"
+description = "Leakage-safe benchmark audit and baseline retrieval infrastructure for code-switched IR."
+requires-python = ">=3.10"
+dependencies = [
+  "datasets>=2.17",
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "psutil>=5.9",
+  "pyarrow>=12",
+  "pyyaml>=6.0",
+  "rank-bm25>=0.2.2",
+  "sentence-transformers>=3.0",
+]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.7"]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+csr-audit = "csr_ir.audit:main"
+csr-run = "csr_ir.run_baseline:main"
+csr-tables = "csr_ir.tables:main"

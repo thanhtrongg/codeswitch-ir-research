@@ -1,0 +1,4 @@
+dataset_stage,system,cs_ndcg_at_10
+Climate holdout,BM25,0.12161169925880368
+Climate holdout,Qwen,0.19607871770934174
+Climate holdout,Selector,0.18251742266413287

@@ -1,0 +1,61 @@
+protocol_id: milestone_1_v1
+status: frozen
+seed: 20260809
+grouping_key: source_query_group
+selection_rule: development_only
+amendments:
+  - id: m1_5_zh_only_clarification
+    date: 2026-08-09
+    reason: >-
+      Milestone 1 execution evaluated only the Chinese-English development
+      query pairs. The resource catalog's language list describes available
+      variants, not variants actually evaluated in the completed runs.
+    previous_ambiguity: >-
+      The development block's languages field listed all published CS-MTEB
+      languages, which could be read as evidence that all language pairs had
+      been evaluated.
+    methodological_impact: >-
+      No result, artifact, selection decision, or final-test boundary changes.
+      This amendment makes the execution history explicit and restricts the
+      declared Milestone 1 evaluated language set to zh.
+development:
+  datasets:
+    - UTokyo-Yokoya-Lab/arguana_CS-MTEB
+    - UTokyo-Yokoya-Lab/ClimateFEVER_hardnegatives_CS-MTEB
+  languages: [zh]
+  languages_evaluated_milestone1: [zh]
+  languages_available_not_evaluated: [ja, de, es, ko, fr, it, pt, nl]
+  execution_history:
+    evaluated_query_pairs: zh-en
+    evaluated_retrieval_resources:
+      - ArguAna
+      - ClimateFEVERHardNegatives
+  reason: >-
+    These are the two CS-MTEB retrieval resources whose declared source datasets
+    are not among CSR-L's source-query groups. This was verified at dataset,
+    corpus, query-ID, source-query, and qrel levels before freezing.
+final_test:
+  benchmark_family: CSR-L
+  datasets:
+    - UTokyo-Yokoya-Lab/webis-touche2020-v3-CSR-L
+    - UTokyo-Yokoya-Lab/HumanEvalRetrieval-CSR-L
+    - UTokyo-Yokoya-Lab/trec-covid-CSR-L
+    - UTokyo-Yokoya-Lab/core17-instructions-mteb-CSR-L
+    - UTokyo-Yokoya-Lab/news21-instructions-mteb-CSR-L
+    - UTokyo-Yokoya-Lab/robust04-instructions-mteb-CSR-L
+  languages: [zh, ja]
+  untouched_after_freeze: true
+  selection_allowed: false
+internal_splits:
+  enabled: false
+  method: group_shuffle_split
+  seed: 20260809
+  note: >-
+    No internal split is used in the frozen protocol. If a later experiment
+    requires one, it must split source-query groups, never rewritten variants.
+restrictions:
+  do_not_tune_on_final_test: true
+  do_not_select_model_on_final_test: true
+  do_not_train_retriever: true
+  do_not_implement_adaptive_fusion: true
+  do_not_normalize_or_fuse_scores: true

@@ -1,0 +1,299 @@
+official_repository:
+  url: https://github.com/paddler2022/Code-Switching-Information-Retrieval
+  commit: 63e0c33826c7cb4f03e93a6819e49b92e6f33196
+paper:
+  url: https://aclanthology.org/2026.findings-acl.636.pdf
+  arxiv: https://arxiv.org/abs/2604.17632
+  version: arXiv v1 / Findings ACL 2026
+models:
+  - name: Qwen3-Embedding-0.6B
+    model_id: Qwen/Qwen3-Embedding-0.6B
+    revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+    usage: encode_query_and_document
+    selection_role: candidate
+  - name: BGE-M3
+    model_id: BAAI/bge-m3
+    revision: 5617a9f61b028005a4858fdac845db406aefb181
+    usage: encode_query_and_document
+    selection_role: candidate
+  - name: multilingual-e5-large
+    model_id: intfloat/multilingual-e5-large
+    revision: 3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3
+    usage: query_prefix_and_passage_prefix
+    selection_role: candidate
+resources:
+  - dataset_id: UTokyo-Yokoya-Lab/webis-touche2020-v3-CSR-L
+    short_name: Touche2020
+    benchmark_family: CSR-L
+    source_dataset: mteb/webis-touche2020-v3
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: human-authored and human-validated (paper CSR-L)
+    languages: [en, zh, ja]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    original_query_source: mteb/webis-touche2020-v3
+    original_query_config: queries
+    original_query_split: train
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en}
+    revision: 45ca9a97c0ce8d247bda9986040d8e2b549bbe5b
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/HumanEvalRetrieval-CSR-L
+    short_name: HumanEvalRetrieval
+    benchmark_family: CSR-L
+    source_dataset: mteb/HumanEvalRetrieval
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: human-authored and human-validated (paper CSR-L)
+    languages: [en, zh, ja]
+    corpus_config: corpus
+    corpus_split: test
+    qrels_config: qrels
+    qrels_split: test
+    original_query_source: mteb/HumanEvalRetrieval
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en}
+    revision: d7634f8e08cf9249cdb2169fb153b0de85d705c8
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/trec-covid-CSR-L
+    short_name: TRECCOVID
+    benchmark_family: CSR-L
+    source_dataset: mteb/trec-covid
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: human-authored and human-validated (paper CSR-L)
+    languages: [en, zh, ja]
+    corpus_config: corpus
+    corpus_split: test
+    qrels_config: default
+    qrels_split: test
+    original_query_source: mteb/trec-covid
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en}
+    revision: a5013e0563346911767949a4f249119d60cb7654
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/core17-instructions-mteb-CSR-L
+    short_name: Core17InstructionRetrieval
+    benchmark_family: CSR-L
+    source_dataset: jhu-clsp/core17-instructions-mteb
+    task_type: instruction_retrieval
+    official_metric: pairwise_mrr
+    rewrite_authoring: not declared in dataset card; retain as provenance risk
+    languages: [en, zh, ja]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    qrel_diff_config: qrel_diff
+    qrel_diff_split: qrel_diff
+    original_query_source: jhu-clsp/core17-instructions-mteb
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en}
+    cs_instruction_configs: {zh: instructions_zh_en, ja: instructions_ja_en}
+    revision: 8b89cba7cc29a70cf70b9ec49f6b80f045afe4ff
+    role: final_test
+    shared_qrels: false
+  - dataset_id: UTokyo-Yokoya-Lab/news21-instructions-mteb-CSR-L
+    short_name: News21InstructionRetrieval
+    benchmark_family: CSR-L
+    source_dataset: jhu-clsp/news21-instructions-mteb
+    task_type: instruction_retrieval
+    official_metric: pairwise_mrr
+    rewrite_authoring: not declared in dataset card; retain as provenance risk
+    languages: [en, zh, ja]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    qrel_diff_config: qrel_diff
+    qrel_diff_split: qrel_diff
+    original_query_source: jhu-clsp/news21-instructions-mteb
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en}
+    cs_instruction_configs: {zh: instructions_zh_en, ja: instructions_ja_en}
+    revision: b165f4edfbbf211e6824dbd7a46b964c375e6132
+    role: final_test
+    shared_qrels: false
+  - dataset_id: UTokyo-Yokoya-Lab/robust04-instructions-mteb-CSR-L
+    short_name: Robust04InstructionRetrieval
+    benchmark_family: CSR-L
+    source_dataset: jhu-clsp/robust04-instructions-mteb
+    task_type: instruction_retrieval
+    official_metric: pairwise_mrr
+    rewrite_authoring: not declared in dataset card; retain as provenance risk
+    languages: [en, zh, ja]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    qrel_diff_config: qrel_diff
+    qrel_diff_split: qrel_diff
+    original_query_source: jhu-clsp/robust04-instructions-mteb
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en}
+    cs_instruction_configs: {zh: instructions_zh_en, ja: instructions_ja_en}
+    revision: 98419b934cc562f458d4a3e3c2f4038fa423cf6d
+    role: final_test
+    shared_qrels: false
+  - dataset_id: UTokyo-Yokoya-Lab/arguana_CS-MTEB
+    short_name: ArguAna
+    benchmark_family: CS-MTEB
+    source_dataset: mteb/arguana
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    original_query_source: mteb/arguana
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: b11f59a0d2e3d2636928608a73cf485bd31a7ac2
+    role: development
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/ClimateFEVER_hardnegatives_CS-MTEB
+    short_name: ClimateFEVERHardNegatives
+    benchmark_family: CS-MTEB
+    source_dataset: mteb/ClimateFEVER_test_top_250_only_w_correct-v2
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: test
+    qrels_config: default
+    qrels_split: test
+    original_query_source: mteb/ClimateFEVER_test_top_250_only_w_correct-v2
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: 742d2689e13422963b6e15a36362ac5315167974
+    role: development
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/HumanEvalRetrieval_CS-MTEB
+    short_name: HumanEvalRetrieval-CS-MTEB
+    benchmark_family: CS-MTEB
+    source_dataset: mteb/HumanEvalRetrieval
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: test
+    qrels_config: qrels
+    qrels_split: test
+    original_query_source: mteb/HumanEvalRetrieval
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: c3351f576b53e848f760285ef4d77cb466f91225
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/trec-covid_CS-MTEB
+    short_name: TRECCOVID-CS-MTEB
+    benchmark_family: CS-MTEB
+    source_dataset: mteb/trec-covid
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: test
+    qrels_config: default
+    qrels_split: test
+    original_query_source: mteb/trec-covid
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: 0d5311e79dbfbe822968bbdc2343c4bd08057c81
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/webis-touche2020-v3_CS-MTEB
+    short_name: Touche2020-CS-MTEB
+    benchmark_family: CS-MTEB
+    source_dataset: mteb/webis-touche2020-v3
+    task_type: document_retrieval
+    official_metric: ndcg_at_10
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: test
+    qrels_config: default
+    qrels_split: test
+    original_query_source: mteb/webis-touche2020-v3
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: c823b1fcb70ee44f4178aacce3fe624775ca77e4
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/core17-instructions-mteb_CS-MTEB
+    short_name: Core17InstructionRetrieval-CS-MTEB
+    benchmark_family: CS-MTEB
+    source_dataset: jhu-clsp/core17-instructions-mteb
+    task_type: instruction_retrieval
+    official_metric: pairwise_mrr
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    original_query_source: jhu-clsp/core17-instructions-mteb
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: 6875544dcc2b71baa5b4799968e2d28e12c272d6
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/news21-instructions-mteb_CS-MTEB
+    short_name: News21InstructionRetrieval-CS-MTEB
+    benchmark_family: CS-MTEB
+    source_dataset: jhu-clsp/news21-instructions-mteb
+    task_type: instruction_retrieval
+    official_metric: pairwise_mrr
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    original_query_source: jhu-clsp/news21-instructions-mteb
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: 239895ad8290d9e68e51bafeca7add63befa2050
+    role: final_test
+    shared_qrels: true
+  - dataset_id: UTokyo-Yokoya-Lab/robust04-instructions-mteb_CS-MTEB
+    short_name: Robust04InstructionRetrieval-CS-MTEB
+    benchmark_family: CS-MTEB
+    source_dataset: jhu-clsp/robust04-instructions-mteb
+    task_type: instruction_retrieval
+    official_metric: pairwise_mrr
+    rewrite_authoring: LLM-generated; author card declares code-switched variants
+    languages: [en, zh, ja, de, es, ko, fr, it, pt, nl]
+    corpus_config: corpus
+    corpus_split: corpus
+    qrels_config: default
+    qrels_split: test
+    original_query_source: jhu-clsp/robust04-instructions-mteb
+    original_query_config: queries
+    original_query_split: test
+    cs_query_configs: {zh: queries_zh_en, ja: queries_ja_en, de: queries_de_en, es: queries_es_en, ko: queries_ko_en, fr: queries_fr_en, it: queries_it_en, pt: queries_pt_en, nl: queries_nl_en}
+    revision: 5038ae297de84d03e60911819a4c93bc3936d9e5
+    role: final_test
+    shared_qrels: true

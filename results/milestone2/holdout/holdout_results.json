@@ -1,0 +1,259 @@
+{
+  "arabzadeh_comparator": {
+    "reason": "No faithful existing implementation with registered features/objective was present at freeze.",
+    "status": "NOT_AVAILABLE"
+  },
+  "bootstrap_selector_minus_qwen": {
+    "code_switched": {
+      "ci_lower": -0.032543918000253934,
+      "ci_upper": 0.0048113375672271955,
+      "confidence_level": 0.95,
+      "observed_mean_difference": -0.01356129504520883,
+      "replicate_means_sha256": "1CA6F047F9BF2FC29F0D8265DC09A30A02280C3131B8DC031F7668F5411116B1",
+      "replicates": 2000,
+      "resampling_unit": "complete_source_query_group",
+      "seed": 20260809
+    },
+    "original": {
+      "ci_lower": -0.04019346117907389,
+      "ci_upper": 0.010080239893545945,
+      "confidence_level": 0.95,
+      "observed_mean_difference": -0.01487788451846475,
+      "replicate_means_sha256": "311F7E4F0594B412A5099101D7375F86071AA143D709F47891580B4C391FFF12",
+      "replicates": 2000,
+      "resampling_unit": "complete_source_query_group",
+      "seed": 20260809
+    }
+  },
+  "calibration_source": "ClimateFEVERHardNegatives FIT code-switched variants only",
+  "dataset": "ClimateFEVERHardNegatives",
+  "group_count": 200,
+  "scope": "holdout",
+  "selected_signal": "normalized_top1_minus_top2_score_margin",
+  "selected_tau": 0.2,
+  "selector_behavior": {
+    "code_switched": {
+      "absolute_gap_bins": [
+        {
+          "lower_inclusive": 0.0,
+          "query_count": 11,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.05,
+          "winner_accuracy": 0.8181818181818182
+        },
+        {
+          "lower_inclusive": 0.05,
+          "query_count": 16,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.1,
+          "winner_accuracy": 0.875
+        },
+        {
+          "lower_inclusive": 0.1,
+          "query_count": 30,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.2,
+          "winner_accuracy": 0.8333333333333334
+        },
+        {
+          "lower_inclusive": 0.2,
+          "query_count": 63,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.4,
+          "winner_accuracy": 0.47619047619047616
+        },
+        {
+          "lower_inclusive": 0.4,
+          "query_count": 80,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 1.000000000001,
+          "winner_accuracy": 0.525
+        }
+      ],
+      "actual_bm25_winner_count": 28,
+      "actual_bm25_winner_rate": 0.14,
+      "actual_qwen_winner_count": 172,
+      "actual_qwen_winner_rate": 0.86,
+      "bm25_choice_count": 68,
+      "bm25_choice_rate": 0.34,
+      "bm25_opportunities_captured": 8,
+      "bm25_opportunity_capture_rate": 0.2857142857142857,
+      "confusion_matrix": {
+        "actual_BM25_predicted_BM25": 8,
+        "actual_BM25_predicted_Qwen": 20,
+        "actual_Qwen_predicted_BM25": 60,
+        "actual_Qwen_predicted_Qwen": 112
+      },
+      "harmful_bm25_switch_rate": 0.8823529411764706,
+      "harmful_bm25_switches": 60,
+      "query_count": 200,
+      "qwen_choice_count": 132,
+      "qwen_choice_rate": 0.66,
+      "winner_accuracy": 0.6
+    },
+    "original": {
+      "absolute_gap_bins": [
+        {
+          "lower_inclusive": 0.0,
+          "query_count": 18,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.05,
+          "winner_accuracy": 0.8888888888888888
+        },
+        {
+          "lower_inclusive": 0.05,
+          "query_count": 13,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.1,
+          "winner_accuracy": 0.9230769230769231
+        },
+        {
+          "lower_inclusive": 0.1,
+          "query_count": 42,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.2,
+          "winner_accuracy": 0.8095238095238095
+        },
+        {
+          "lower_inclusive": 0.2,
+          "query_count": 55,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 0.4,
+          "winner_accuracy": 0.5454545454545454
+        },
+        {
+          "lower_inclusive": 0.4,
+          "query_count": 72,
+          "status": "POST_HOC_DIAGNOSTIC",
+          "upper_exclusive": 1.000000000001,
+          "winner_accuracy": 0.4305555555555556
+        }
+      ],
+      "actual_bm25_winner_count": 36,
+      "actual_bm25_winner_rate": 0.18,
+      "actual_qwen_winner_count": 164,
+      "actual_qwen_winner_rate": 0.82,
+      "bm25_choice_count": 61,
+      "bm25_choice_rate": 0.305,
+      "bm25_opportunities_captured": 10,
+      "bm25_opportunity_capture_rate": 0.2777777777777778,
+      "confusion_matrix": {
+        "actual_BM25_predicted_BM25": 10,
+        "actual_BM25_predicted_Qwen": 26,
+        "actual_Qwen_predicted_BM25": 51,
+        "actual_Qwen_predicted_Qwen": 113
+      },
+      "harmful_bm25_switch_rate": 0.8360655737704918,
+      "harmful_bm25_switches": 51,
+      "query_count": 200,
+      "qwen_choice_count": 139,
+      "qwen_choice_rate": 0.695,
+      "winner_accuracy": 0.615
+    }
+  },
+  "systems": {
+    "BGE-M3": {
+      "code_switched": {
+        "mrr": 0.1517425694367573,
+        "ndcg@10": 0.10079198227113814,
+        "recall@10": 0.12666666666666665
+      },
+      "delta_cs": {
+        "mrr": 0.0024361623388359233,
+        "ndcg@10": 0.0030463351955313245,
+        "recall@10": 0.005666666666666639
+      },
+      "original": {
+        "mrr": 0.14930640709792137,
+        "ndcg@10": 0.09774564707560682,
+        "recall@10": 0.12100000000000001
+      }
+    },
+    "BM25": {
+      "code_switched": {
+        "mrr": 0.17809345242805122,
+        "ndcg@10": 0.12161169925880368,
+        "recall@10": 0.14491666666666667
+      },
+      "delta_cs": {
+        "mrr": -0.044405052930341776,
+        "ndcg@10": -0.03666750342814541,
+        "recall@10": -0.060416666666666646
+      },
+      "original": {
+        "mrr": 0.222498505358393,
+        "ndcg@10": 0.1582792026869491,
+        "recall@10": 0.2053333333333333
+      }
+    },
+    "Oracle diagnostic": {
+      "code_switched": {
+        "mrr": 0.34642693041697215,
+        "ndcg@10": 0.24561470714178874,
+        "recall@10": 0.2796666666666667
+      },
+      "delta_cs": {
+        "mrr": -0.03649722647023984,
+        "ndcg@10": -0.026698215839173256,
+        "recall@10": -0.035666666666666624
+      },
+      "original": {
+        "mrr": 0.382924156887212,
+        "ndcg@10": 0.272312922980962,
+        "recall@10": 0.3153333333333333
+      }
+    },
+    "Qwen": {
+      "code_switched": {
+        "mrr": 0.2792496095411517,
+        "ndcg@10": 0.19607871770934174,
+        "recall@10": 0.233
+      },
+      "delta_cs": {
+        "mrr": -0.0440784161493854,
+        "ndcg@10": -0.02376379607549453,
+        "recall@10": -0.01774999999999996
+      },
+      "original": {
+        "mrr": 0.3233280256905371,
+        "ndcg@10": 0.21984251378483627,
+        "recall@10": 0.25075
+      }
+    },
+    "RRF": {
+      "code_switched": {
+        "mrr": 0.2776901386764613,
+        "ndcg@10": 0.1988274998624503,
+        "recall@10": 0.24241666666666667
+      },
+      "delta_cs": {
+        "mrr": -0.02396046398866164,
+        "ndcg@10": -0.032944450054992996,
+        "recall@10": -0.0635
+      },
+      "original": {
+        "mrr": 0.30165060266512295,
+        "ndcg@10": 0.2317719499174433,
+        "recall@10": 0.30591666666666667
+      }
+    },
+    "Selector": {
+      "code_switched": {
+        "mrr": 0.25443952794770036,
+        "ndcg@10": 0.18251742266413287,
+        "recall@10": 0.21549999999999997
+      },
+      "delta_cs": {
+        "mrr": -0.041459111807396254,
+        "ndcg@10": -0.022447206602238673,
+        "recall@10": -0.01766666666666672
+      },
+      "original": {
+        "mrr": 0.2958986397550966,
+        "ndcg@10": 0.20496462926637155,
+        "recall@10": 0.2331666666666667
+      }
+    }
+  },
+  "target_recalibration": false
+}
